@@ -1,0 +1,32 @@
+<view class="page">
+    <view class="list">
+        <view class="list-item" wx:for="{{list}}" wx:key="index" catchtap="gotitlelist" data-uid="{{item.id}}">
+            <view class="one sort" wx:if="{{index == 0}}">{{index+1}}.</view>
+            <view class="two sort" wx:if="{{index == 1}}">{{index+1}}.</view>
+            <view class="three sort" wx:if="{{index == 2}}">{{index+1}}.</view>
+            <view class="sort" wx:if="{{index > 2}}">{{index+1}}.</view>
+            <image class="headimg" src="{{item.headImg}}" />
+            <view class="write">
+                <view class="name">
+                    <text>{{item.nickName}}</text>
+                    <!-- <view class="startbox">
+                        <image class="start" src="../../img/start.png" />
+                        <text class="sortnum">{{index+1}}</text>
+                    </view> -->
+                </view>
+                <view class="remark">{{item.remark}}</view>
+                <view class="numlist">
+                    <text class="num">粉丝:{{item.fansNumber}}</text>
+                    <text class="num">文章:{{item.contentNumber}}</text>
+                    <text class="num">点赞:{{item.praiseNumber}}</text>
+                </view>
+            </view>
+            <view class="rigth">
+                <image src="../../img/back.png"/>
+            </view>
+        </view>
+    </view>
+    <botTip havedata="{{havedata}}" length="{{list.length}}" tips="没有更多数据了"></botTip>
+    <noData len="{{list}}"><view >暂无数据</view></noData>
+
+</view>

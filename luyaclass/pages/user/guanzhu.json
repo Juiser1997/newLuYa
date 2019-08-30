@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "headNav":"../../component/headnav/headnav",
+    "botTip": "../../component/BotTip/BotTip",
+    "noData": "../../component/noData/noData"
+  },
+  "navigationBarTitleText": "我的关注"
+}

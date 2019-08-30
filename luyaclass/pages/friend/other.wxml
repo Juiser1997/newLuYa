@@ -1,0 +1,26 @@
+    <!--我的圈-->
+<view class="myring">
+    <view class="myring-top">
+    <image class="top-headimg" src="{{headImg}}" />
+    <text>{{headName}}</text>
+    </view>
+    <view class="myring-content" wx:for="{{cliList}}" wx:key='index'>
+    <view class='myring-content-date' wx:if="{{item.year!=2019}}">{{item.year}}年</view>
+    <view class="myring-item" bindlongpress='Deldynamic' catchtap="godetail" wx:for="{{item.time}}" wx:for-item="it" wx:key="key" data-id='{{it.id}}' data-idx='{{index}}'>
+        <view class="myring-item-left">
+        <!-- <text class="today" wx:if="{{it.today}}">{{it.today}}</text> -->
+        <text class="today">{{it.day}}</text>
+        <text class="">{{it.month}}月</text>
+        </view>
+        <view class="myring-item-right" >
+            <image wx:if="{{it.content.imgs.length>0}}" class="myring-item-right-img" mode="aspectFill" src="{{it.content.imgs[0]}}" />
+            <image wx:if="{{it.video}}" class="myring-item-right-img" mode="aspectFill" src="{{it.videoImg}}" />
+            <text  wx:if="{{it.video}}" class="video-tips">视频</text>
+            <view class="myring-item-content" wx:if="{{it.content.text}}">
+                <view class="myring-item-txt">{{it.content.text}}</view>
+                <view class="myring-item-txt-bot" wx:if="{{it.content.imgs.length>0}}">共{{it.content.imgs.length}}张</view>
+            </view>
+        </view>
+    </view>
+    </view>
+</view>

@@ -1,0 +1,8 @@
+    <view class="loading" wx:if="{{havedata}}">
+        <view >
+            加载更多<image src="../../img/loading.gif" />
+        </view>
+    </view>
+    <view class="loading" wx:if="{{!havedata && length >0}}">
+        <view>{{tips}}</view>
+    </view>

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "BotTip": "../../component/BotTip/BotTip",
+    "loading": "../../component/loading/loading",
+    "titleList": "../../component/title-list/title-list"
+  }
+}

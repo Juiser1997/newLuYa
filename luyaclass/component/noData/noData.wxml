@@ -1,0 +1,4 @@
+<view class="noData" wx:if="{{len.length==0}}">
+  <text class="iconfont wushuju wsj"></text>
+  <slot></slot>
+</view>

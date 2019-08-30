@@ -1,0 +1,78 @@
+<view class="page" wx:if="{{haveuser}}">
+    <image src="../../img/gerenzhongxin_bg.png" class="bg-img"></image>
+    <view class="top">
+      <view class="top-info" bindtap="gouserinfo">
+        <image src="{{headImg}}" class="info-left"/>
+        <view class="info-right">
+            <view class="right-user">
+              <text class="nickName">{{nickName}}</text>
+              <view class="mercBox" wx:if="{{roleId == '2019080214444277130'}}">商家</view>
+              <view class="brandBox" wx:if="{{roleId == '2019080214441887640'}}">品牌</view>
+            </view>
+            <view class="intro">{{remark}}</view>
+        </view>
+      </view>
+      <view class="top-data">
+        <view class="data-tip">
+          <text class="tipOne">{{fansNumber}}</text>
+          <text class="tipTwo">粉丝</text>
+        </view>
+        <view class="data-tip">
+          <text class="tipOne">{{contentNumber}}</text>
+          <text class="tipTwo">文章</text>
+        </view>
+        <view class="data-tip">
+          <text class="tipOne">{{praiseNumber}}</text>
+          <text class="tipTwo">获赞</text>
+        </view>
+      </view>
+      <view class="top-mer" wx:if="{{roleId == '2019080214444277130'}}">
+        <image src="../../img/chakanshangjia.png" class="chakanshangjia"></image>
+        <text>查看商家店铺</text> 
+      </view>
+    </view>
+    <view class="mid">
+        <navigator class="mid-item" wx:for="{{list}}" wx:key="index" hover-class="none" url="{{item.url}}">
+            <view class="mid-left">
+                <text class="iconfont {{item.icon}} attention"></text> 
+                <text class="msgnum" wx:if="{{index == 3 && num > 0}}">{{num}}</text>
+            </view>
+            <view class="mid-item-content">
+                <text>{{item.text}}</text>
+                <view class="rigth">
+                    <image src="../../img/back.png"/>
+                </view>
+            </view>
+        </navigator>
+    </view>
+    <!-- <view class="bot" wx:if="{{roleId!= 'master'}}">
+        <navigator class="mid-item"  hover-class="none" url="/pages/user/attest">
+            <text class="iconfont me_icon_daka attention"></text>
+            <view class="mid-item-content">
+                <text>大咖认证</text>
+                <view class="rigth">
+                    <image src="../../img/back.png"/>
+                </view>
+            </view>
+        </navigator>
+    </view> -->
+    <!-- <view class="bot">
+        <navigator class="mid-item"  hover-class="none" url="/pages/user/member">
+            <text class="iconfont me_icon_dakarenzhen attention"></text>
+            <view class="mid-item-content">
+                <text>申请会员</text>
+                <view class="rigth">
+                    <image src="../../img/back.png"/>
+                </view>
+            </view>
+        </navigator>
+    </view> -->
+    <view style="background-color:#fff;margin-top:10rpx">
+      <titleList List="{{newslist}}" bind:titleId="godetails"></titleList>
+      <view class="nodata" wx:if="{{newslist.length == 0}}">
+        <text>暂无更多数据了</text>
+      </view>
+      <BotTip havadata = "{{pagedata}}" length="{{newslist.length}}"></BotTip>
+    </view>
+</view>
+<Auth class="Auth" haveUser="{{!haveuser}}" bind:Login="login"></Auth>

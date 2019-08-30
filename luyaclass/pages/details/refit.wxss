@@ -1,0 +1,8 @@
+.cont{margin-top: 20rpx;}
+.Event-item>image{width: 371rpx;height: 91rpx;}
+.Event{display: flex;margin: 20rpx 0;padding: 0 2rpx;justify-content: space-between;}
+.Eventsai-item>image{width: 256rpx;height: 104rpx;}
+.Eventsai{display: flex;margin: 20rpx 0;padding: 0 2rpx;justify-content: space-between;}
+.Eventvip>image{width: 224rpx;height: 104rpx;}
+.nodata{height: 80rpx;width: 100%;color:#999;display: flex;box-sizing: border-box;line-height: 80rpx;font-size: 28rpx;justify-content: center;border-radius: 8rpx;}
+.titlelist{margin-top: 20rpx}

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "BotTip":"../../component/BotTip/BotTip"
+  },
+  "navigationBarTitleText": "评论详情"
+}

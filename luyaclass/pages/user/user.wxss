@@ -1,0 +1,30 @@
+.page{width: 100%;min-height: 100vh;overflow: hidden;background-color: #f3f3f3;}
+.top{width: 100%;position: fixed;z-index: 10;font-family:PingFang-SC-Regular;}
+.bg-img{width: 100%;height: 390rpx;position: fixed;top: 0;left: 0;z-index: 1;}
+.top-info{padding: 20rpx 34rpx;display: flex;}
+.info-right{padding: 26rpx 30rpx}
+.right-user{display: flex;font-size:18rpx;font-weight:400;color:rgba(255,255,255,1);line-height:30rpx;text-align: center}
+.intro{font-size:22rpx;font-weight:300;color:rgba(255,255,255,1);line-height:18rpx;margin-top: 13rpx}
+.mercBox{width:70rpx;height:30rpx;background:rgba(122,189,39,1);border-radius:15rpx;margin-top: 5rpx;margin-left: 11rpx;margin-right: 10rpx}
+.brandBox{width:70rpx;height:30rpx;background:rgba(76,177,255,1);border-radius:15rpx;margin-top: 5rpx;}
+.nickName{font-size:36rpx;font-family:PingFang-SC-Bold;font-weight:bold;color:rgba(255,255,255,1);line-height:18px;}
+.info-left{height: 120rpx;width:120rpx;border-radius:50%;}
+.top-data{display: flex;padding: 20rpx 40rpx 38rpx 40rpx;line-height:45rpx;}
+.data-tip{flex:0.33;text-align: center;color: #ffffff;}
+.tipOne{display: block;font-size:48rpx;font-weight:bold;}
+.tipTwo{font-size:24rpx;font-weight:400;}
+.top-mer{width:100%;height:80rpx;background:rgba(58,89,255,1);text-align: center;line-height: 80rpx;color: #fff;font-size:28rpx;}
+.chakanshangjia{width: 32rpx;height: 32rpx;vertical-align: middle;}
+.top-mer>text{margin-left: 12rpx}
+.rigth{display: flex;width: 100rpx;justify-content: flex-end;}
+.rigth>image{width: 30rpx;height: 30rpx;align-self: center;}
+.mid{background-color: #fff;padding-top: 390rpx}
+.mid-item{display: flex;height: 110rpx;}
+.mid-left{height: 110rpx;display: flex;position: relative;}
+.msgnum{color:#fff;background-color:#F5594e;line-height: 36rpx; height: 36rpx;min-width:36rpx;font-size: 24rpx;
+    border-radius: 100%;position: absolute;top:15rpx;right: 5rpx;text-align: center;}
+.attention{font-size: 45rpx;align-self: center;padding:0 20rpx;}
+.mid-item-content{display: flex;line-height: 110rpx;justify-content: space-between;width: 655px;box-sizing: border-box;padding-right: 20rpx;border-bottom: 1rpx solid #e5e5e5;}
+.mid-item:nth-last-child(1) .mid-item-content{border: none;}
+.bot{background-color: #fff;margin-top: 10rpx;}
+.nodata{height: 80rpx;width: 100%;color:#999;display: flex;box-sizing: border-box;line-height: 80rpx;font-size: 28rpx;justify-content: center;border-radius: 8rpx;}

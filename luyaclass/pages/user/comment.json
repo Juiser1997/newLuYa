@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "botTip": "../../component/BotTip/BotTip",
+    "knoData": "../../component/noData/noData"
+    
+  },
+  "navigationBarTitleText": "我的评论"
+  
+}

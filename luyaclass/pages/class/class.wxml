@@ -1,0 +1,14 @@
+  <headNav nav="{{headnav}}" currentTab="{{currentTab}}" bind:myNavChangeTab="changeTab" width="index" class="head"></headNav>
+  <view class="con">
+    <Carouse imgs="{{Img}}" bind:titleId="godetails"></Carouse>
+    <midNav  only="{{midstyle}}" midNav="{{Nav}}" midNavTab="{{texTab}}" modalHidden="{{false}}" bind:myMidNavChangeTab="texbarTap"></midNav>
+    <!-- <Search placeholder="类别/关键字" bind:Search="mySearch" bind:Remove="myRemove" left="240" modalHidden="{{currentTab!==1}}"></Search> -->
+    <titleList List="{{newslist}}" bind:titleId="godetails"></titleList>
+    <view class="nodata" wx:if="{{newslist.length == 0}}">
+      <text>暂无更多数据了</text>
+    </view>
+    <videoList List="{{videolist}}" bind:videoId="govideodetail"  modalHidden="{{currentTab!==1}}"></videoList>
+  </view>
+
+
+

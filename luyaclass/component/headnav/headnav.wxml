@@ -1,0 +1,12 @@
+<view class="head-nav">
+  <view wx:for="{{nav}}" 
+        data-idx="{{index}}" 
+        data-id="{{item.id}}"
+        class="item {{currentTab==index ? 'active' : ''}}  {{width}}" 
+        wx:key="unique" 
+        bindtap="navbarTap">
+        {{item.name}}
+    <view  wx:if="{{width == 'friend' && index == 3 && msg}}"class="red"></view>
+    <view class="item-line {{currentTab==index ? 'active' : ''}}"></view>
+  </view>
+</view>

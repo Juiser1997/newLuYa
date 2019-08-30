@@ -1,0 +1,17 @@
+  <view class="article" wx:for="{{list}}" wx:key="index" bindlongpress='DelCollect' bindtap="gotitle" data-id ="{{item.id}}" data-cid="{{item.bcId}}" data-inx="{{index}}">
+    <view class="article-item">
+      <view class="article-item-left">
+        <view class="article-item-title">{{item.title}}</view>
+        <view class="article-item-bottom">
+          <!-- <text class="iconfont icon_fire fire" wx:if="{{index<4 && ty!= 'collect'}}"></text> -->
+          <text>{{item.nickName || '路亚东方'}}</text>
+          <!-- <text wx:if="{{item.comments}}">{{item.comments}}评论</text> -->
+          <!-- <text>{{item.createTime}}</text> -->
+          <text>{{item.time}}</text>
+        </view>
+      </view>
+      <image src="{{item.coverImg}}" class="article-item-right" mode="aspectFit" />
+    </view>
+  </view>
+ <noData len="{{list}}"><view>暂无收藏</view></noData>
+ <botTip havedata="{{pagedata}}" tips="没有更多收藏了" length="{{list.length}}"></botTip>

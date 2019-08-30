@@ -1,0 +1,12 @@
+.top{display: flex;flex-direction: column;align-items: center;margin: 60rpx 0;}
+.headImg{width: 160rpx;height: 160rpx;border-radius: 100%;}
+.nickName{font-size: 32rpx;color:#999;line-height: 40rpx;}
+.mid{display: flex;flex-direction: column;align-items: center;}
+.reward-text{font-size: 34rpx;font-weight: bold;line-height: 60rpx;}
+.mid-wrap{display: flex;flex-wrap: wrap;margin: 0 30rpx;}
+.mid-wrap-item{width: 156rpx;text-align: center;line-height: 80rpx;border:2rpx solid #f0f0f0;border-radius: 5rpx;margin:10rpx 20rpx 10rpx 0;font-size: 40rpx;box-sizing: border-box;}
+.mid-wrap-item.active{border:2rpx solid #4b6dff;}
+.mid-wrap-item text{margin-left: 5rpx;font-size: 30rpx;color:#999;}
+.reward-btn-item{width: 690rpx;text-align: center;line-height: 96rpx;border-radius: 10rpx;margin: 10rpx 0;font-size: 32rpx;}
+.reward-tips{background-color:#f3f4f5;color:#999;}
+.reward-btn{background-color: #4b6dff;color:#fff;}

@@ -1,0 +1,10 @@
+.top{display: flex;margin: 72rpx 80rpx;justify-content: space-between;}
+.logo{width: 176rpx;height: 176rpx;}
+.icon_x{width: 78rpx;height:78rpx;align-self: center;}
+.Auth-tips{margin: 0 50rpx;color: #333;font-size: 30rpx;line-height: 48rpx;}
+.msg{margin:50rpx;display: flex ;padding: 18rpx 24rpx;box-shadow: 0 2rpx 12rpx 0 rgba(0, 0, 0, 0.1)}
+.msg>image{width: 74rpx;height: 74rpx;}
+.txt{margin-left: 24rpx;}
+.txt-h1{font-size: 28rpx;font-weight: bold;}
+.txt-h2{font-size: 24rpx;color: #999;}
+.Explain{width: 100%;text-align: center;font-size: 30rpx;line-height: 48rpx;color: #333;margin-bottom: 30rpx;}

@@ -1,0 +1,63 @@
+<view class="page"  wx:if="{{applyStatus==0}}">
+        <view class="input-group sp">
+        <view class="label">所在地/城市</view>
+        <view class="rigth">
+            <picker
+                mode="region"
+                bindchange="bindRegionChange"
+                value="{{address}}"
+                custom-item="{{customItem}}">
+                <view class="picker">
+                    {{address}}
+                </view>
+            </picker>            
+             <image src="../../img/back.png"/>
+        </view>
+    </view>
+    <view class="top">
+        <view class="input-group">
+            <view class="label">大咖艺名</view>
+            <view class="input-box">
+                <input  placeholder="请输入艺名" placeholder-class="plac" value="{{stageName}}" bindinput="bindartname"/>
+            </view>
+        </view>
+        <view class="input-group">
+            <view class="label">申请人姓名</view>
+            <view class="input-box">
+                <input  placeholder="请输入姓名" placeholder-class="plac" value="{{realName}}" bindinput="bindname"/>
+            </view>
+        </view>
+        <view class="input-group">
+            <view class="label">申请人电话</view>
+            <view class="input-box">
+                <input type="number" placeholder="请输入电话" placeholder-class="plac" value="{{phone}}" bindinput="bindphone"/>
+            </view>
+        </view>
+        <view class="input-group">
+            <view class="label">身份证号码</view>
+            <view class="input-box">
+                <input type="idcard" placeholder="请输入身份证" placeholder-class="plac" value="{{cardNum}}" bindinput="bindIDcode"/>
+            </view>
+        </view>
+    </view>
+    <view class="text-arear">
+        <view class="label Introduction">简介</view>
+        <textarea  placeholder="请输入简介" placeholder-class="plac" value="{{sign}}" bindinput="bindtext"></textarea>
+    </view>
+    <view class='agreemnt'>
+      <image src="{{istrue ? '../../img/gou_pressed.png' : '../../img/gou_nomal.png'}}" bindtap="goAgreement"></image>
+      <navigator class="mid-item" hover-class="none" url="/pages/details/masteragree">
+        我已认真阅读协议
+      </navigator>
+    </view>
+    <form name='pushMsg' report-submit='true' bindsubmit='getFormID'> 
+        <button form-type="submit" class="login">马上申请</button>
+    </form>
+    <!-- <view class="login" bindtap="apply">马上申请</view> -->
+</view>
+<view wx:if="{{applyStatus==1}}" class='page'>
+   <view class="auditLogin">大咖正在申请中</view>
+</view>
+<view wx:if="{{applyStatus==2}}" class='page'>
+   <view class="auditLogin">审核已通过</view>
+</view>

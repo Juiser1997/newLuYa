@@ -1,0 +1,32 @@
+.page{width: 100%;min-height: 100vh;background-color: #f3f4f5;}
+.top{display: flex;padding: 20rpx;background-color: #fff;}
+.comment-head{height: 50rpx;width: 50rpx;border-radius: 100%;}
+.top-right{padding: 0 20rpx;width: calc(100% - 70rpx);}
+.userName{font-size: 24rpx;color:#576b95;display: flex;line-height: 50rpx;}
+.userName>text{font-size: 20rpx;color: #266bbf;padding:0  10rpx;border:1rpx solid #266bbf;border-radius: 2rpx;margin-left: 15rpx;height: 30rpx;line-height: 30rpx;align-self: center}
+.content{padding: 15rpx 0;font-size: 32rpx;}
+.time{color: #999;font-size: 24rpx;}
+.zan{color:#4b6dff;}
+.grey-zan{color:#515151;}
+.top-bot{display: flex;justify-content: space-between;width: 100%;}
+.top-bot-right{display: flex;font-size: 24rpx;}
+.top-bot-right>view{padding: 0 15rpx;}
+.top-bot-right>view>text{padding-right: 8rpx;}
+.reply{margin-top: 20rpx;padding: 20rpx;background: #fff;}
+.reply-item{display: flex;margin-top: 20rpx;}
+.item-right-top{display: flex;line-height: 50rpx;}
+.item-right-top>.time{padding-left: 25rpx;}
+.item-right{border-bottom: 1rpx solid #ededed;padding: 0 20rpx;width: calc(100% - 70rpx);position: relative;}
+.item-right .item-delete{position: absolute;top:0rpx;left: 150rpx;line-height: 50rpx;width: 240rpx;color:#fff;background-color: rgba(0, 0, 0, 0.7);z-index: 10;font-size: 24rpx;border-radius: 10rpx;display: flex;justify-content: space-between;}
+.item-right .item-delete>text{width: 120rpx;text-align: center;box-sizing: border-box;}
+.item-right .item-delete>text:nth-child(1){border-right: 1rpx solid #fff;}
+.reply-top{font-size: 32rpx;}
+.reply-top>text{color: #999;}
+.replybox{position: fixed;bottom: 0;left:0;height:100rpx;width: 750rpx;display: flex;background-color: #fff;justify-content: center;}
+.reply-input-IPX{padding-bottom:34px;}
+.replybox>input{width: 650rpx;height: 60rpx;line-height: 60rpx;background-color:#f8f9fa;align-self: center;padding-left: 25rpx;}
+.input-placeholder{color:#0c0c0c;font-size: 28rpx;padding-left: 20rpx;}
+.white{width: 750rpx;height: 100rpx;}
+.whiteIPX{height: 150rpx;}
+.replyboxIPX{padding-bottom: 34px;}
+

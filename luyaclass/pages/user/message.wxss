@@ -1,0 +1,12 @@
+.top{display: flex;line-height: 88rpx;border-bottom: 1rpx solid #ddd;box-sizing: border-box;justify-content: space-between;padding: 0 30rpx;color:#999;font-size: 28rpx;}
+.ready{color:#576b95;}
+.icon-gou{height: 32rpx;width: 32rpx;}
+.msg-item{display: flex;font-size: 30rpx;}
+.img-box{position: relative;padding: 15rpx 30rpx;}
+.headimg{height: 80rpx;width: 80rpx;border-radius: 100%;}
+.red-origin{width: 20rpx;height: 20rpx;background-color: #f1403c;border-radius: 100%;position: absolute;top:15rpx;right: 30rpx;}
+.msg-item-content{padding: 15rpx 30rpx 15rpx 0;box-sizing: border-box;border-bottom: 1rpx solid #ddd;color:#999;width: calc(100% - 140rpx);}
+.msg-item-text{margin: 15rpx 0;color:#555;overflow: hidden;text-overflow: ellipsis;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2; }
+.msg-time{font-size: 24rpx;}
+.icon-msg{font-size: 80rpx;color:#4b6dff;}
+.sp{font-weight: bold;color:#0c0c0c;margin-bottom: 15rpx;}

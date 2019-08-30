@@ -1,0 +1,33 @@
+<view class="head-nav">
+  <view wx:for="{{nav}}" 
+        data-idx="{{index}}" 
+        class="item {{currentTab==index ? 'active' : ''}}" 
+        wx:key="unique" 
+        bindtap="navbarTap">
+        {{item.title}}({{item.num}})
+    <view class="item-line {{currentTab==index ? 'active' : ''}}"></view>
+  </view>
+</view>
+<view class="attention" hidden="{{currentTab!==0}}">
+  <view class="attention-item" wx:if="{{item.status!=0}}" wx:for="{{guanzhuList}}" wx:key="key" catchtap="gotitlelist" data-uid="{{item.id}}">
+    <image class="attention-item-headimg" src="{{item.headImg}}" />
+    <view class="attention-item-right">
+      <text>{{item.nickName}}</text>
+      <view class="attention-status" catchtap='calloff' data-id='{{item.fid}}' data-inx="{{index}}">已关注</view>
+    </view>
+  </view>  
+</view>
+<view class="attention" hidden="{{currentTab!==1}}">
+  <view class="attention-item" wx:for="{{fansList}}" wx:key="key" catchtap="gotitlelist" data-uid="{{item.id}}">
+    <image class="attention-item-headimg" src="{{item.headImg}}" />
+    <view class="attention-item-right">
+      <text>{{item.nickName}}</text>
+      <view class="attention-status {{item.statu==0 ? 'active' : ''}}" wx:if="{{item.statu==1}}" catchtap="fensData" data-id='{{item.id}}' data-inx="{{index}}">已关注</view>
+      <view class="attention-status {{item.statu==0 ? 'active' : ''}}" wx:if="{{item.statu==0}}" catchtap="fensData" data-id='{{item.id}}' data-inx="{{index}}">+关注</view>
+    </view>
+  </view>
+</view>
+ <botTip wx:if="{{currentTab==1 && fansList.length!=0}}" havedata="{{pagedata}}" tips="没有更多粉丝了" length="{{fansList.length}}"></botTip>
+ <noData  wx:if="{{currentTab==1}}" len="{{fansList}}"><view>暂无粉丝</view></noData>
+ <noData  wx:if="{{currentTab==0}}" len="{{guanzhuList}}"><view>暂无关注</view></noData>
+ <botTip wx:if="{{currentTab==0 && guanzhuList.length!=0}}" havedata="{{havedata}}" tips="没有更多关注了" length="{{guanzhuList.length}}"></botTip>

@@ -1,0 +1,131 @@
+<wxs module="filters" src="../../utils/time.wxs"></wxs>
+<view wx:if="{{havacontent}}">
+    <view class="page">
+        <scroll-view class="src" style="height:{{height}}px;" scroll-y="true"  scroll-into-view="{{toView}}" scroll-with-animation='true' bindscrolltolower="getmore">
+            <view id="top" class="article">
+                <view class="title">{{articleDetail.title}}</view>
+                <view class="top">{{articleDetail.createTime}}<text class="xie">/</text>{{articleDetail.browse}}浏览</view>
+                <view class="mid">
+                    <view class="mid-left">
+                        <image class="head" src="{{articleDetail.headImg}}"/>
+                        <view class="nickName">{{articleDetail.nickName}}</view>
+                        <!-- <text>编辑</text> -->
+                    </view>
+                    <view class="mid-rigth">
+                        <view class="attention" wx:if="{{status == 0 && userId!= articleDetail.id}}" catchtap="changeAttentionStatus">关注作者</view>
+                        <view wx:if="{{status == 1 && userId!= articleDetail.id}}" catchtap="changeAttentionStatus">已关注</view>
+                        <view class="collect" wx:if="{{articleDetail.isCollect == 0}}" catchtap="collect">收藏本文</view>
+                        <view  wx:if="{{articleDetail.isCollect == 1}}" catchtap="collect">已收藏</view>
+                    </view>
+                </view>
+                <!-- <view class="tip top">
+                    本文共{{articleDetail.words}}个文字 {{articleDetail.imgs}}张图片
+                </view> -->
+                <view class="contxt">
+                    <htmltowxml  text="{{content}}" bindWxmlTagATap="wxmlTagATap" ></htmltowxml>
+                </view>
+                <view class="like">
+                    <view catchtap="Praise" wx:if="{{articleDetail.isPraise == 1}}">
+                        <text class="iconfont icon_zan_pressed- zan"></text>{{articleDetail.praise}}
+                    </view>
+                    <view catchtap="Praise" wx:if="{{articleDetail.isPraise == 0}}">
+                        <text class="iconfont icon_zan_pressed- grey-zan"></text>{{articleDetail.praise}}
+                    </view>
+                    <view catchtap="noLike" data-sta="{{articleDetail.isLike}}" wx:if="{{articleDetail.isLike == 1}}">
+                        <text class="iconfont icon_buxihuan_nomal_ zan"></text>{{articleDetail.nolike}}
+                    </view>
+                    <view catchtap="noLike" data-sta="{{articleDetail.isLike}}" wx:if="{{articleDetail.isLike == 0}}">
+                        <text class="iconfont icon_buxihuan_nomal_ grey-zan"></text>{{articleDetail.nolike}}
+                    </view>
+                    <view catchtap="Report" data-ty="content">
+                        <text class="iconfont icon_jubao1"></text>举报
+                    </view>
+                    <!-- <view ><image class="icon-wx" src="../../img/icon_weixin.png"/> 微信</view> -->
+                    <button open-type='share'>
+                        <text class="iconfont share"></text>分享
+                    </button>
+                    <!-- <view ><image class="icon-wx" src="../../img/icon_pengyouquan.png"/> 朋友圈</view> -->
+                </view>
+            </view>
+            <view class="comment" id="bot" >
+                <view class="comment-top">
+                    <text>全部评论</text>
+                    <view class="comment-top-rigth">
+                        <text class="iconfont icon_zuixin zuixin"></text>最新
+                    </view>
+                </view>
+                <view class="comment-box" wx:if="{{comment.length!==0}}">
+                    <view class="comment-item" wx:for="{{comment}}" wx:key="any">
+                        <view class="item-left">
+                            <image class="comment-head" src="{{item.headImg}}"/>
+                        </view>
+                        <view class="item-right">
+                            <view class="userName">{{item.nickName}}</view>
+                            <view class="content" bindlongpress='DeleteComment' data-idx="{{index}}" data-user="{{item.userId}}">
+                                {{item.content}}
+                            </view>
+                            <view class="item-bot">
+                                <text class="time">{{filters.Time(item.sjc)}}</text>
+                                <view class="item-bot-right">
+                                    <view catchtap="Praise" data-ind="{{index}}" wx:if="{{item.isPraise == 0}}">
+                                        <text class="iconfont icon_zan_nomal-_"></text><text class="right-txt">{{item.praise}}</text>
+                                    </view>
+                                    <view catchtap="Praise" data-ind="{{index}}" wx:if="{{item.isPraise == 1}}">
+                                        <text class="iconfont icon_zan_pressed- zan"></text> <text class="right-txt">{{item.praise}}</text>
+                                    </view>
+                                    <view catchtap="changeReplyStatus"  data-ind="{{index}}">
+                                        <text class="iconfont icon_huifu"></text><text class="right-txt">回复</text>
+                                    </view>
+                                    <view catchtap="Report" data-inx="{{index}}">
+                                        <text class="iconfont icon_jubao1"></text><text class="right-txt">举报</text>
+                                    </view>
+                                </view>
+                            </view>
+                            <view class="child" wx:if="{{item.replyList.data.items.length>0}}">
+                                <view class="item-child" wx:for="{{item.replyList.data.items}}" wx:key="cny">
+                                    <view class="item-child-top">
+                                        <text class="comment-user">{{item.nickName}}</text><text class="time">{{filters.Time(item.sjc)}}</text>
+                                        <view class="" >
+                                            {{item.content}}
+                                        </view>
+                                    </view>
+                                </view>
+                                <navigator class="item-reply" 
+                                    hover-class="none" 
+                                    url="/pages/details/reply?commentId={{item.id}}" 
+                                    wx:if="{{item.replyList.data.totalNum>3}}">
+                                    共{{item.replyList.data.totalNum}}条回复>
+                                </navigator> 
+                            </view>
+                        </view>
+                    </view>
+                </view>
+                <view wx:if="{{comment.length==0}}" class="comment-box-black">
+                    <text>暂时还没有人评论哦！</text>
+                </view>
+            </view>
+            <BotTip havedata ="{{havedata}}" length="{{comment.length}}"></BotTip>
+            <view class=" {{IPX ? 'white whiteIPX': 'white'}}"></view>
+        </scroll-view>
+    </view>
+
+    <!-- <view class="back-home" catchtap="gohome">回首页</view> -->
+    <view class="{{IPX ? 'bottom bottomIP' : 'bottom'}}" >
+        <input type="text" placeholder="发表评论..." value="{{CommentText}}" placeholder-class="input-placeholder" class="huifu-box"  confirm-type="send" bindconfirm="Comment" bindinput="CommentText" cursor-spacing="20"/>
+        <view class="iconfont icon_dibu_huifu- huifu" catchtap="move" data-mv="bot">
+            <text class="msgnum">{{commentNum}}</text>
+        </view>
+    </view>
+    <view class=" {{IPX ? 'replybox replyboxIPX' : 'replybox'}}" hidden="{{!keybl}}">
+        <input class="reply" type="text" placeholder="回复" value="{{replyText}}" placeholder-class="input-placeholder" confirm-type="send" bindconfirm="Reply" bindinput="ReplyText" cursor-spacing="20" focus="{{keybl}}"/>
+        <text catchtap="changeReplyStatus">取消</text>
+    </view>
+</view>
+<view class="back-home" catchtap="gohome">回首页</view>
+<view class="noData" wx:if="{{!havacontent}}">
+  <text class="iconfont wushuju wsj"></text>
+  <view>该文章已经删除了,去看看别的</view>
+</view>
+
+
+

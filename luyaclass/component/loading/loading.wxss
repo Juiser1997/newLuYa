@@ -1,0 +1,3 @@
+.animation{width: 400rpx;height: 400rpx;margin: 0 auto;margin-top: 360rpx;position: relative;}
+.bg{width: 142rpx;height: 104rpx;position: absolute;top:100rpx;left: 120rpx;z-index: 10;}
+.bg-d{width: 230rpx;height: 230rpx;position: absolute; top:50rpx;left: 98rpx;z-index: 100;}

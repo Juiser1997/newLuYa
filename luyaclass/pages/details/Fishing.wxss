@@ -1,0 +1,6 @@
+.bot{font-size: 22rpx;color:#999;line-height: 45rpx;}
+.bot>text{padding-right: 10rpx;}
+.covimg{width: 690rpx;height: 390rpx;border-radius: 5rpx;}
+.title{font-size: 32rpx;line-height: 45rpx;}
+.list-item{padding: 0 30rpx;padding-top: 30rpx;}
+.fire{width: 21rpx;height: 24rpx;color:#f55b4e;}

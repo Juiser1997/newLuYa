@@ -1,0 +1,96 @@
+{
+  "pages": [
+    "pages/welcome/welcome",
+    "pages/index/index",
+    "pages/class/class",
+    "pages/details/details",
+    "pages/details/video-detail",
+    "pages/reward/reward",
+    "pages/user/user",
+    "pages/login/login",
+    "pages/release/release",
+    "pages/user/userinfo",
+    "pages/user/guanzhu",
+    "pages/user/attest",
+    "pages/user/comment",
+    "pages/user/message",
+    "pages/user/reader",
+    "pages/friend/friend",
+    "pages/details/reply",
+    "pages/writelist/writelist",
+    "pages/details/refit",
+    "pages/welcome/shop",
+    "pages/details/Fishing",
+    "pages/writelist/titlelist",
+    "pages/welcome/web",
+    "pages/class/test",
+    "pages/friend/detail",
+    "pages/user/collect",
+    "pages/friend/other",
+    "pages/release/video",
+    "pages/details/loginOne",
+    "pages/details/loginTwo",
+    "pages/details/vip",
+    "pages/details/loginThree",
+    "pages/user/member",
+    "pages/details/agreement",
+    "pages/details/masteragree",
+    "pages/writelist/bosslist"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#4b6dff",
+    "navigationBarTitleText": "路亚帮",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#666",
+    "selectedColor": "#4b6dff",
+    "backgroundColor": "#fff",
+    "position": "bottom",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "img/home_nomal-01.png",
+        "selectedIconPath": "img/home_pressed-01.png"
+      },
+      {
+        "pagePath": "pages/class/class",
+        "text": "课堂",
+        "iconPath": "img/ketang_nomal-01.png",
+        "selectedIconPath": "img/ketang_pressed-01.png"
+      },
+      {
+        "pagePath": "pages/release/release",
+        "iconPath": "img/fabu.png",
+        "selectedIconPath": "img/fabu.png"
+      },
+      {
+        "pagePath": "pages/friend/friend",
+        "text": "路亚客",
+        "iconPath": "img/luyake_nomal-01.png",
+        "selectedIconPath": "img/luyake_pressed-01.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "img/me_nomal-01.png",
+        "selectedIconPath": "img/me_pressed-01.png"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序当前定位"
+    }
+  },
+  "plugins": {
+    "htmltowxml": {
+      "version": "1.4.0",
+      "provider": "wxa51b9c855ae38f3c"
+    }
+  },
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,25 @@
+<view class="video-box">
+    <video src="{{article.videosrc}}" object-fit="fill"></video>
+</view>
+<view class="page">
+    <view class="title">{{article.title}}</view>
+    <view class="top">{{article.time}}<text class="xie">/</text>{{article.readnum}}</view>
+    <view class="mid">
+        <view class="mid-left">
+            <image class="head" src="{{article.headImg}}"/>
+            <view class="nickName">{{article.nickName}}</view>
+            <text>编辑</text>
+        </view>
+        <view class="mid-rigth" wx:if="{{article.status==0}}">+关注</view>
+        <view class="mid-rigth" wx:if="{{article.status==1}}">已关注</view>
+    </view>
+    <view class="content">{{article.text}}</view>
+    <view class="reward">
+        <text class="reward-text">优质内容值得打赏</text>
+        <view class="reward-btn" bindtap="reward">打赏</view>
+        <view class="share">
+            <view ><image class="icon-wx" src="../../img/icon_weixin.png"/> 微信</view>
+            <view ><image class="icon-wx" src="../../img/icon_pengyouquan.png"/> 朋友圈</view>
+        </view>
+    </view>
+</view>

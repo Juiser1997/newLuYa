@@ -1,0 +1,3 @@
+  <titleList List="{{newslist}}" bind:titleId="godetails" bind:delete="readdelete" modalHidden="{{currentTab!==0}}"></titleList>
+  <botTip havedata="{{havedata}}" length="{{newslist.length}}" tips="没有更多阅读纪录了"></botTip>
+  <noData len="{{newslist}}"><view>无阅读记录</view></noData>

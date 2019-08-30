@@ -1,0 +1,9 @@
+.nav-txt{display: flex;padding: 10rpx 24rpx;flex-wrap: wrap;}
+.nav-txt .item{line-height: 60rpx; color:#666;background-color:#f3f4f6;border-radius: 30rpx;text-align: center;font-size: 28rpx;margin: 10rpx 0;margin-right: 19rpx;width: 125rpx;}
+.nav-txt .item:nth-child(5){margin-right: 0;}
+.nav-txt .active{color: #4b6dff;background-color: #e2e8ff;border:2rpx solid #cfd9ff;box-sizing: border-box;}
+.bignav .item{width: 196rpx;}
+/* .fishing .item{margin-right: 20rpx;width: 196rpx;} */
+/* .Skill{justify-content: space-between;} */
+.Skill .item{width: 156rpx;}
+.Tool .item{width: 156rpx;margin-right: 20rpx;}

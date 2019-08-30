@@ -1,0 +1,5 @@
+
+<view class="animation">
+    <image class="bg" src="../../img/zhuan2.png" />
+    <image class="bg-d" src="../../img/zhuan.png" mode="aspectFit" animation="{{animation}}" />
+</view>

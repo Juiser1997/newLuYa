@@ -1,0 +1,7 @@
+    <view class="start">
+        <image class="huanyin_bg" src="../../img/huanyin_bg.png"></image>
+        <view class="logo">
+          <image class="huanyin_logo" src="../../img/huanyin_logo.png"></image>
+        </view>
+        <!-- <image class="logo" src="../../img/logo.png" /> -->
+    </view>

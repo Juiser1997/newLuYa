@@ -1,0 +1,85 @@
+# 路亚帮
+
+## 文件目录
+- luya-admin 后台管理
+    - public 360兼容模式 移动端适配rem 配置位置 配置favicon
+    - dist 打包后生成的文件 可以直接放到服务器 注意线上地址
+    - src 项目主要文件
+        - api 接口管理
+            - api 接口列表
+            - apiconfig  接口管理
+            - axios 对axios 请求的配置
+            - page 系统页面管理
+            - new 运营模版
+            - system 系统配置
+            - user 系统用户管理
+        - assets 静态资源
+        - components 封装的组件
+        - router 路由管理
+        - util 封装方法
+            - config 富文本配置
+            - util 一些常用的方法
+        - views 业务页面(具体页面详情 在router里面)
+        - app 项目入口文科
+        - main 全局的插件已经路由权限管理
+    - vue.config.js 配置文件
+- luyaclass 小程序
+    -  api 接口文件
+        - api 小程序接口列表
+        - http 封装的小程序请求
+        - req 返回业务数据
+     - component 组件文件
+        - Auth 授权组件
+        - BotTip 更多数据
+        - carouse 轮播组件
+        - headnav 头部tap
+        - loading 加载组件
+        - midnav 中间nav
+        - noData 没有数据
+        - search 搜索
+        - title-list 文章列表
+        - video-title 视频列表
+    - img 小程序静态图片资源
+    - pages 业务页面
+        - class 课堂
+        - details 详情
+            - details 文章详情
+            - Fishing 钓场
+            - refit 改装
+            - reply 回复详情
+            - video-detail 视频详情
+        - friend 
+            - detail 动态详情
+            - friend 路亚圈
+            - orther 他的圈
+        - index 首页
+        - login 授权页
+        - release 发布
+        - reward 打赏
+        - user 
+            - user 用户中心
+            - attest 大咖认证
+            - collect 我的收藏
+            - comment 我的评论
+            - guanzhu 我的关注
+            - menber 会员
+            - message 消息中心
+            - reader 阅读记录
+            - userinfo 用户信息
+        - welcome 启动页
+            - welcome 启动页
+            - shop 推荐商家
+            - web 外链页面
+        - writelist 路亚帮
+            - titlelist 文章列表
+            - writelist 作者列表
+    - utils
+        -  time 时间过滤器
+        -  util 上传文件 空值 时间的封装方法
+    - app.js 全局数据 小程序更新逻辑
+    - app.json 小程序页面插件的管理
+    - app.wxss 全局样式 iconfont 的引入
+    - project.config.json 项目配置文件
+    - sitmap.json 权限配置生成文件
+
+#### 项目进度

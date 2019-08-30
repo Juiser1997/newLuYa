@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "botTip": "../../component/BotTip/BotTip",
+    "noData": "../../component/noData/noData"
+  },
+  "navigationBarTitleText": "申请会员"
+}

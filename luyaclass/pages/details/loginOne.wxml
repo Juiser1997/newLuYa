@@ -1,0 +1,22 @@
+<view class="Auth" wx:if="{{!haveuser}}">
+    <view class="top">
+        <image src="../../img/tiangou.png" class="logo"/>
+        <image src="../../img/icon_x.png" class="icon_x" />
+        <image src="../../img/logo.png" class="logo" />
+    </view>
+    <view class="Auth-tips">
+        2019-2020天高路亚俱乐部注册系统由路亚帮小程序提供技术支持，天高路亚俱乐部随机注册码将通过路亚帮小程序的服务通知进行发放        
+    </view>
+    <view class="msg">
+        <image src="../../img/icon_fuwutongzhi.png" />
+        <view class="txt">
+            <view class="txt-h1">服务通知</view>
+            <view class="txt-h2">信息处理提醒</view>
+        </view>
+    </view>
+    <view class="Explain">
+        <view>为保障您能顺利收到天高会员注册码</view>
+        <view>请登录路亚帮小程序</view>
+    </view>
+</view>
+<Auth class="Auth" haveUser="{{!haveuser}}" bind:Login="login" vip="{{'tg'}}"></Auth>

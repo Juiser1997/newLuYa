@@ -1,0 +1,16 @@
+.headimg{height: 120rpx;width: 120rpx;border-radius: 100%;margin: 0 20rpx;}
+.list-item{display: flex;padding: 30rpx;border-bottom: 1rpx solid #ededed;box-sizing: border-box;height: 180rpx;}
+.sort{font-size: 36rpx;color: #999;line-height: 120rpx;}
+/* .tuisort{width: 36rpx; } */
+.one{color: #FFCC00;font-weight: bold;}
+.two{color: #bbb;font-weight: bold;}
+.three{color: #AB6527;font-weight: bold;}
+.start{width: 40rpx;height: 32rpx;}
+.write{width: 395rpx;}
+.remark{color: #666;font-size: 22rpx; display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 1;overflow: hidden;width: 395rpx;}
+.rigth{display: flex;width: 100rpx;justify-content: flex-end;}
+.rigth>image{width: 30rpx;height: 30rpx;align-self: center;}
+.numlist{display:flex;color: #999;font-size: 24rpx;line-height: 50rpx;padding-top: 15rpx;}
+.istuijian{border-style: solid;border-width: 1rpx;border-color: rgb( 247, 91, 79 );border-radius: 10rpx;background-color: rgba( 254, 254, 254, 0 );padding: 3rpx 10rpx;font-size: 20rpx;text-align: center;align-self: center;line-height: 31rpx;color: rgb( 247, 91, 79 );margin-right: 15rpx}
+.name{font-size: 30rpx;display: flex;}
+.num{padding-right:10rpx;}

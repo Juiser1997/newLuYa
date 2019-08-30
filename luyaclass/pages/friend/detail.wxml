@@ -1,0 +1,124 @@
+<wxs module="filters" src="../../utils/time.wxs"></wxs>
+<view class="page" hidden="{{fullScreen}}">
+    <scroll-view class="src" style="height:{{height}}px;" scroll-y="true"  scroll-into-view="{{toView}}" scroll-with-animation='true' bindscrolltolower="getmore">
+        <view class="dynamic-item">
+            <view class="dynamic-top">
+                <view class="dynamic-headimg"><image src="{{dynamic.headImg}}" class="headimg"/></view>
+                <view class="dynamic-content">
+                    <view class="dynamic-top-top">
+                        <text>{{dynamic.nickName}}</text>
+                        <view class="attention-status" wx:if="{{dynamic.isAttention==1 && userId!=dynamic.userId}}" catchtap='changeAttent'>已关注</view>
+                        <view class="attention-status active" wx:if="{{dynamic.isAttention==0 && userId!=dynamic.userId}}" catchtap='changeAttent'>+关注</view>
+                    </view>
+                    <view>
+                        <view class="dynamic-txt" wx:if="{{dynamic.content.text!== ''}}">{{dynamic.content.text}}</view>
+                        <view class="dynamic-imglist" wx:if="{{dynamic.content.imgs.length>0}}" >
+                            <image  wx:for="{{dynamic.content.simgs}}" mode="aspectFill" wx:key="index" wx:for-item="img" data-list="{{dynamic.content.imgs}}" data-src="{{img}}" catchtap="imgPreview"  src="{{img}}" />
+                        </view>
+                        <view class="item-video" wx:if="{{dynamic.video}}">
+                            <image hidden="{{autoplay}}" src="{{dynamic.videoImg}}" mode="aspectFill" class="covimg" catchtap="openVideo" data-url="{{dynamic.video}}" />
+                            <image  hidden="{{autoplay}}" src="../../img/video.png"  class="icon-video" catchtap="openVideo" data-url="{{dynamic.video}}"/>
+                            <video id='myvideo'  
+                                wx:if="{{url}}"
+                                src="{{url}}" 
+                                direction="0" 
+                                catchtap="closeVideo" 
+                                autoplay="{{autoplay}}" 
+                                show-play-btn="{{false}}" 
+                                show-progress="{{false}}" 
+                                loop="{{true}}"
+                                show-fullscreen-btn="{{false}}">
+                            </video>
+                        </view>
+                    </view>
+                    <view class="dynamic-time"><text>{{filters.Time(dynamic.sjc)}}</text></view>
+                </view>
+            </view>
+            <view class="dynamic-bot">
+                <button wx:if="{{dynamic.publicity == 1}}" open-type='share' class="share-btn dynamic-bot-item">
+                    <text class="iconfont share"></text>
+                </button>
+                <view catchtap="Report" data-ty="content">
+                    <text class="iconfont icon_jubao1 jubao"></text>
+                </view>
+                <view catchtap="Praise" data-index="{{index}}" class="dynamic-bot-item" wx:if="{{dynamic.isPraise == 0}}">
+                    <text class="iconfont icon_zan_nomal-_"></text>{{dynamic.praise}}
+                </view>
+                <view catchtap="Praise" data-index="{{index}}" class="dynamic-bot-item" wx:if="{{dynamic.isPraise == 1}}">
+                    <text class="iconfont icon_zan_pressed- zan"></text>{{dynamic.praise}}
+                </view>
+            </view>
+        </view>
+        <view class="comment" id="bot" >
+            <view class="comment-top">
+                <text>全部评论</text>
+                <view class="comment-top-rigth">
+                    <text class="iconfont icon_zuixin zuixin"></text>最新
+                </view>
+            </view>
+            <view class="comment-box" wx:if="{{comment.length!==0}}">
+                <view class="comment-item" wx:for="{{comment}}" wx:key="any">
+                    <view class="item-left">
+                        <image class="comment-head" src="{{item.headImg}}"/>
+                    </view>
+                    <view class="item-right">
+                        <view class="userName">{{item.nickName}}</view>
+                        <view class="content" bindlongpress='DeleteComment' data-idx="{{index}}" data-user="{{item.userId}}">
+                            {{item.content}}
+                        </view>
+                        <view class="item-bot">
+                            <text class="time">{{filters.Time(item.sjc)}}</text>
+                            <view class="item-bot-right">
+                                <view catchtap="Praise" data-ind="{{index}}" wx:if="{{item.isPraise == 0}}">
+                                    <text class="iconfont icon_zan_nomal-_"></text><text class="right-txt">{{item.praise}}</text>
+                                </view>
+                                <view catchtap="Praise" data-ind="{{index}}" wx:if="{{item.isPraise == 1}}">
+                                    <text class="iconfont icon_zan_pressed- zan"></text> <text class="right-txt">{{item.praise}}</text>
+                                </view>
+                                <view catchtap="changeReplyStatus"  data-ind="{{index}}">
+                                    <text class="iconfont icon_huifu"></text><text class="right-txt">回复</text>
+                                </view>
+                                <view catchtap="Report" data-inx="{{index}}">
+                                    <text class="iconfont icon_jubao1"></text><text class="right-txt">举报</text>
+                                </view>
+                            </view>
+                        </view>
+                        <view class="child" wx:if="{{item.replyList.data.items.length>0}}">
+                            <view class="item-child" wx:for="{{item.replyList.data.items}}" wx:key="cny">
+                                <view class="item-child-top">
+                                    <text class="comment-user">{{item.nickName}}</text><text class="time">{{filters.Time(item.sjc)}}</text>
+                                    <view class="" >
+                                        {{item.content}}
+                                    </view>
+                                </view>
+                            </view>
+                            <navigator class="item-reply" 
+                                hover-class="none" 
+                                url="/pages/details/reply?commentId={{item.id}}" 
+                                wx:if="{{item.replyList.data.totalNum>3}}">
+                                共{{item.replyList.data.totalNum}}条回复>
+                            </navigator> 
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view wx:if="{{comment.length==0}}" class="comment-box-black">
+                <text>暂时还没有人评论哦！</text>
+            </view>
+        </view>
+        <BotTip havedata ="{{havedata}}" length="{{comment.length}}"></BotTip>
+        <view class=" {{IPX ? 'white whiteIPX': 'white'}}"></view>
+    </scroll-view>
+</view>
+<view class="back-home" catchtap="gohome">回圈</view>
+<view class="{{IPX ? 'bottom bottomIP' : 'bottom'}}" >
+    <input type="text" placeholder="发表评论..." value="{{CommentText}}" placeholder-class="input-placeholder" class="huifu-box"  confirm-type="send" bindconfirm="Comment" bindinput="CommentText" cursor-spacing="20"/>
+    <view class="iconfont icon_dibu_huifu- huifu" catchtap="move" data-mv="bot">
+        <text class="msgnum">{{dynamic.comments}}</text>
+    </view>
+</view>
+<view class=" {{IPX ? 'replybox replyboxIPX' : 'replybox'}}" hidden="{{!keybl}}">
+    <input class="reply" type="text" placeholder="回复" value="{{replyText}}" placeholder-class="input-placeholder" confirm-type="send" bindconfirm="Reply" bindinput="ReplyText" cursor-spacing="20" focus="{{keybl}}"/>
+    <text catchtap="changeReplyStatus">取消</text>
+</view>
+

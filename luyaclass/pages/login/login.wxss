@@ -1,0 +1,18 @@
+.page{width: 100%;min-height: 100vh;overflow: hidden;background-color:#f3f3f3;}
+.top{padding-left: 20rpx;background-color: #fff;margin-top: 40rpx;}
+.input-group{display: flex;line-height: 110rpx;font-size: 32rpx;background-color: #fff;box-sizing: border-box;border-bottom: 1rpx solid #ededed;}
+.input-group:nth-last-child(1){border: none;}
+.sp{justify-content: space-between;padding: 0 20rpx;margin-top: 20rpx;}
+.label{width: 150rpx;}
+.Introduction{position: absolute;top:20rpx;left: 20rpx;}
+.input-box>input{height: 110rpx;line-height: 110rpx;}
+.getcode{color:#4b6dff;}
+.rigth{display: flex;}
+.rigth>image{width: 30rpx;height: 30rpx;align-self: center;}
+.plac{line-height: 110rpx;color:#999;}
+.text-arear{background-color: #fff;margin-top: 20rpx;height: 160rpx;padding: 20rpx;box-sizing: border-box;position: relative;}
+.text-arear textarea{width: 100%;height: 100%;padding-left: 100rpx;box-sizing: border-box;}
+.login{width: 670rpx;line-height: 96rpx;color:#fff;background-color: #4b6dff;border-radius: 10rpx;text-align: center;font-size: 36rpx;font-weight: bolder;margin: 40rpx;}
+.signbtn{width: 670rpx;height: 100rpx;line-height: 100rpx;color:#fff;background-color: #4b6dff;text-align: center;margin-top: 450rpx;}
+.agreemnt{line-height: 80rpx;font-size: 26rpx;display: flex;justify-content: center}
+.agreemnt image{width: 30rpx;height: 30rpx;align-self: center;margin-right: 20rpx;}

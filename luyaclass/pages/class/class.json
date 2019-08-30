@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "headNav":"../../component/headnav/headnav",
+    "midNav":"../../component/midnav/midnav",
+    "Search":"../../component/search/search",
+    "Carouse":"../../component/carouse/carouse",
+    "titleList":"../../component/title-list/title-list",
+    "videoList":"../../component/video-title/video-title"
+  },
+  "navigationBarTitleText": "课堂"
+}

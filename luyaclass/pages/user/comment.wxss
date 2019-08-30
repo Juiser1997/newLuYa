@@ -1,0 +1,8 @@
+.comment-item{padding: 20rpx 30rpx;font-size: 30rpx;border-bottom: 1rpx solid #ddd;}
+.comment-top{color:#999;}
+.comment-top>text{color:#4b6dff;}
+.comment-wrap{margin:20rpx 0;color:#555;overflow: hidden;text-overflow: ellipsis;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2; }
+.comment-bot{padding: 20rpx;background-color:#f8f9fa;}
+.comment-title{color:#555;overflow: hidden;text-overflow: ellipsis;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2; }
+.comment-title>text{color:#576b95;  margin-bottom: 5rpx;}
+.more{display: flex;align-items: center;justify-content: center;}

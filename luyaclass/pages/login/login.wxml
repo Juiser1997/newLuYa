@@ -1,0 +1,55 @@
+ <view class="userBtn" wx:if="{{userInfo}}">
+    <button open-type="getUserInfo" bindgetuserinfo="getUserInfo" class="signbtn">点我授权</button>
+  </view>
+<view class="page" wx:else>
+  <view class="top">
+    <view class="input-group">
+      <view class="label">姓名</view>
+      <view class="input-box">
+        <input placeholder="请输入姓名" placeholder-class="plac" value="{{name}}" bindinput="bindname" />
+      </view>
+    </view>
+    <view class="input-group">
+      <view class="label">电话</view>
+      <view class="input-box">
+        <input placeholder="请输入电话" placeholder-class="plac" value="{{phone}}" bindinput="bindphone" />
+      </view>
+    </view>
+    <view class="input-group">
+      <view class="label">验证码</view>
+      <view class="input-box">
+        <input placeholder="请输入验证码" placeholder-class="plac" value="{{code}}" bindinput="bindcode" />
+      </view>
+      <view class="getcode" bindtap="getCode">{{btntext}}</view>
+    </view>
+  </view>
+  <view class="input-group sp">
+    <view class="label">性别</view>
+    <view class="rigth" bindtap="changesex">
+      <text>{{sex}}</text>
+      <image src="../../img/back.png" />
+    </view>
+  </view>
+  <view class="input-group sp">
+    <view class="label">所在地</view>
+    <view class="rigth">
+      <picker mode="region" bindchange="bindRegionChange" value="{{address}}" custom-item="{{customItem}}">
+        <view class="picker">
+          {{address}}
+        </view>
+      </picker>
+      <image src="../../img/back.png" />
+    </view>
+  </view>
+  <view class="text-arear">
+    <view class="label Introduction">简介</view>
+    <textarea placeholder="请输入简介" placeholder-class="plac" value="{{text}}" bindinput="bindtext"></textarea>
+  </view>
+  <view class='agreemnt'>
+    <image src="{{istrue ? '../../img/gou_pressed.png' : '../../img/gou_nomal.png'}}" bindtap="goAgreement"></image>
+    <navigator class="mid-item" hover-class="none" url="/pages/details/agreement">
+      我已认真阅读协议
+    </navigator>
+  </view>
+  <view class="login" bindtap="login">注册</view>
+</view>

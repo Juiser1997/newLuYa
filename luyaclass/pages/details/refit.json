@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "botTip": "../../component/BotTip/BotTip",
+    "titleList": "../../component/title-list/title-list",
+    "Carouse": "../../component/carouse/carouse"
+  },
+  "navigationBarTitleText": ""
+}

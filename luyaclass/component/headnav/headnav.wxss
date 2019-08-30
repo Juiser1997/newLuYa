@@ -1,0 +1,8 @@
+.head-nav{display: flex;height: 100rpx;justify-content: center;}
+.head-nav .item{display: flex;flex-direction: column;align-self: center;align-items: center;font-size: 30rpx;position: relative;}
+.head-nav .index{width: calc(100%/5);}
+.head-nav .friend{width: calc(100%/4);}
+.red{position: absolute;top:0;right: 36rpx;height: 18rpx;width: 18rpx;border-radius: 100%;background-color: #F5594e;}
+.head-nav .active{color: #4b6dff;font-size: 36rpx;font-weight: bold;}
+.item-line{height: 6rpx;width: 50rpx;background-color:#fff;margin-top: 10rpx;border-radius: 6rpx;}
+.item-line.active{background-color:#4b6dff;}

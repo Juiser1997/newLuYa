@@ -1,0 +1,49 @@
+.friend{padding-top: 100rpx;}
+.head{position: fixed;top: 0;left: 0;width: 100%;height: 100rpx;background-color: #fff;z-index: 100;}
+.moving-item{display: flex;border-bottom: 1rpx solid #eee;box-sizing: border-box;padding-bottom:15rpx; background-color: #fff;flex-direction: column;border-bottom: 20rpx solid #f3f3f3;}
+.item-headimg{padding:20rpx;}
+.item-headimg>image{height: 80rpx;width: 80rpx;border-radius: 100%;}
+.itme-txt{font-size: 34rpx;line-height: 42rpx;}
+.item-content{width: calc(100% - 120rpx);}
+.item-top{display: flex;justify-content: space-between;line-height: 80rpx;padding: 0 25rpx 0 10rpx;}
+.item-top>text{color: #576b95;font-size: 34rpx;font-weight: bold;}
+.item-imglist{display: flex;flex-wrap: wrap;}
+.item-imglist>image{width: 150rpx;height: 150rpx;padding:10rpx;}
+.item-imglist>image:nth-child(3n+1){padding-left: 0;}
+.item-top .attention-status{line-height: 48rpx;width: 120rpx;color:#999;border:2rpx solid #ccc;
+    font-size: 28rpx;text-align: center;align-self: center;border-radius: 5rpx;}
+.item-top .active{color: #4b6dff;border:2rpx solid #4b6dff;}
+.item-time{font-size: 28rpx;color:#999;line-height: 72rpx;}
+.item-bot{display: flex;line-height: 80rpx;height: 80rpx;margin: 0 20rpx;border-top:1rpx solid #eee;box-sizing: border-box;justify-content: space-between;color: #999;}
+.bot-item{display: flex;justify-content: center;width: calc(100%/3);}
+.bot-item>text{color:#999;font-size: 40rpx;margin-right: 8rpx;}
+.bot-item>text.zan{color:#576B95;}
+.share-btn::after{border: 0;}
+.share-btn{padding: 0;background: #fff;margin: 0;line-height: 80rpx;}
+.myring{background-color: #fff;}
+.myring-top{height: 130rpx;display: flex;padding: 0 25rpx;line-height: 130rpx;box-sizing: border-box;border-top: 1rpx solid #eee;border-bottom: 1rpx solid #eee;}
+.myring-top>text{margin-left: 25rpx;font-size: 34rpx;color:#576b95;}
+.top-headimg{height: 96rpx;width: 96rpx;border-radius: 100%;align-self: center;}
+.myring-item-right-img{width: 150rpx;height: 150rpx;}
+.myring-item{display: flex;padding: 20rpx;}
+.myring-content{margin-top: 20rpx;}
+.myring-item-left{width: 150rpx;position: relative;}
+.myring-item-right{display: flex;position: relative;}
+.myring-item-content{width: 390rpx;font-size: 30rpx;padding: 0 10rpx; position: relative;}
+.myring-item-left{font-size: 24rpx;font-weight: bold;}
+.myring-item-left .today{font-size: 50rpx;}
+.myring-item-txt{overflow: hidden;text-overflow: ellipsis;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;}
+.myring-item-txt-bot{color:#666;margin-top:75rpx}
+.red{position: absolute;top:0;right: 30rpx;height: 18rpx;width: 18rpx;border-radius: 100%;background-color: #F5594e;}
+.item-video{height: 420rpx;width: 250rpx;position: relative; margin-top: 10rpx;z-index: 10;}
+video{height: 420rpx;width: 250rpx;z-index: 1;}
+.covimg{width: 100%;height: 100%;}
+.item-video .icon-video{width: 50rpx;height: 50rpx;position: absolute;top:185rpx;right: 100rpx;}
+.video-tips{position: absolute;top:0;left: 0;color: #fff;font-size: 24rpx;}
+.tishi{width: 340rpx;height: 160rpx;border-radius: 8rpx;background-color: #fff;position: fixed;bottom: 30rpx;left: 205rpx;box-shadow: 0 2rpx 12rpx 0 rgba(0, 0, 0, 0.1);z-index: 1100;}
+.tishi::after{position: absolute;display: inline-block;top: 135rpx;
+    left: 150rpx;width:0 ;height: 0;content: '';border-style: solid;border-width: 20rpx;
+    border-color: #fff #fff transparent transparent;transform:rotate(135deg);box-shadow: 2rpx -2rpx 3rpx 0 rgba(0, 0, 0, 0.1);}
+.tishi-bg{width: 245rpx;height: 115rpx;position: absolute;top:-50rpx;right:48rpx;}
+.icon-cha{width: 20rpx;height: 20rpx;position: absolute;top:20rpx;right: 20rpx;color: #999;}
+.ts-txt{font-size: 28rpx;color:#666;text-align: center;margin-top: 100rpx;}

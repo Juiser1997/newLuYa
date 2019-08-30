@@ -1,0 +1,54 @@
+<wxs module="filters" src="../../utils/time.wxs"></wxs>
+<view class="top">
+    <text class="">通知列表</text>
+    <!-- <view class="ready">全部已读 
+        <image class="icon-gou" src="../../img/ch.png" />
+    </view> -->
+</view>
+<view class="msg-item" wx:for="{{list}}" wx:key="index" catchtap="godetail" data-id="{{item.id}}" data-cid="{{item.contentId}}">
+    <view class="img-box">
+        <image class="headimg"  src="{{item.headImg}}"/>
+        <view class="red-origin" wx:if="{{item.status == 0}}"></view>
+    </view>
+    <view class="msg-item-content">
+        <view class="msg-item-top">{{item.nickName}} 新增了1篇文章</view>
+        <view class="msg-item-text">{{item.title}}</view>
+        <view class="msg-time">
+           {{filters.Time(item.sjc)}}
+        </view>
+    </view>
+</view>
+ <noData len="{{list}}"><view>暂无消息</view></noData>
+ <botTip havedata="{{pagedata}}" tips="没有更多消息了" length="{{list.length}}"></botTip>
+<!-- <view class="msg-item comment">
+    <view class="img-box">
+        <text class="iconfont me_tongzhi_ icon-msg"></text>
+        <view class="red-origin"></view>
+    </view>
+    <view class="msg-item-content">
+        <view class="sp">评论与转发</view>
+        <view class="msg-item-top">大悲宇宙 等 6人评论了你的回答</view>
+        <view class="msg-item-text">
+            路亚钓游是近几年才兴起发展，路亚钓鱼是利用鱼儿捕食特点的钓法。路亚路亚..
+        </view>
+        <view class="msg-time">
+            4小时前
+        </view>
+    </view>
+</view>
+<view class="msg-item comment">
+    <view class="img-box">
+        <text class="iconfont me_tongzhi-1 icon-msg"></text>
+        <view class="red-origin"></view>
+    </view>
+    <view class="msg-item-content">
+        <view class="sp">赞同与感谢</view>
+        <view class="msg-item-top">大悲宇宙 等 6人赞同了你的回答</view>
+        <view class="msg-item-text">
+            路亚钓游是近几年才兴起发展，路亚钓鱼是利用鱼儿捕食特点的钓法。路亚路亚..
+        </view>
+        <view class="msg-time">
+            4小时前
+        </view>
+    </view>
+</view> -->

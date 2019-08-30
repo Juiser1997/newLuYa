@@ -1,0 +1,38 @@
+/* pages/details/masteragree.wxss */
+.agree{
+  padding: 20rpx 40rpx 40rpx;
+  line-height: 48rpx;
+}
+.agree-title{
+  font-size: 32rpx;
+  font-weight: bold;
+  color: black;
+  padding: 20rpx 0;
+}
+.agree-content{
+  font-size: 26rpx;
+  color: #333;
+  text-indent: 1.5rem;
+}
+.agree-titone,.agree-titkuohao{
+  font-size: 28rpx;
+  text-indent: 1.5rem;
+  color: #333;
+}
+.agree-tittwo{
+  margin-left: 1.5rem;
+  font-size: 26rpx;
+  text-indent: 1.5rem;
+  color: #333;
+}
+.agree-titroman{
+  font-family: '楷体';
+  text-indent: 1.5rem;
+  font-size: 28rpx;
+  color: #333;
+}
+.agree-hint{
+  margin-top: 30rpx;
+  font-weight: bold;
+  font-size: 32rpx;
+}

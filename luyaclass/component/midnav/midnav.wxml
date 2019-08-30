@@ -1,0 +1,3 @@
+  <view class="nav-txt {{only}}" hidden="{{modalHidden}}">
+    <view wx:for="{{midNav}}" data-idx="{{index}}" data-id="{{item.id}}" class="item {{midNavTab == index ? 'active' : ''}}" wx:key="any" bindtap="barTap">{{item.name}}</view>
+  </view>

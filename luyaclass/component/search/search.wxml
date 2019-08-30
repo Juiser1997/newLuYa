@@ -1,0 +1,7 @@
+    <view class="search-box" hidden="{{modalHidden}}">
+        <input type="text" placeholder='{{placeholder}}' confirm-type="search" bindconfirm="search" bindinput="searchname" value="{{searchvalue}}" placeholder-class="place-tips"/>
+        <image src='../../img/search.png' class="search-icon" style="left:{{left}}rpx;"></image>
+        <view class="remove-box" hidden="{{searchvalue == ''}}" catchtap="remove">
+            <image class="remove" src="../../img/remove.png" mode="aspectFit|aspectFill|widthFix"></image>
+        </view>
+    </view>

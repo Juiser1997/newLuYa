@@ -1,0 +1,200 @@
+<wxs module="filters" src="../../utils/time.wxs"></wxs>
+<view wx:if="{{haveuser}}" >
+  <!-- 头部nav -->
+  <headNav nav="{{headnav}}" msg="{{msg}}" currentTab="{{currentTab}}" bind:myNavChangeTab="changeTab" class="head" width="friend"></headNav>
+  <view class='friend'>
+    <!--路亚圈-->
+    <view class="moving"  hidden="{{currentTab !== 0}}">
+      <view class="moving-item" wx:for="{{friendList}}" wx:key="{{index}}" >
+        <view class="item-top" catchtap="godetail" data-id="{{item.id}}" data-time="{{item.sjc}}">
+          <view class="item-headimg" catchtap="gouser" data-uid="{{item.userId}}"><image src="{{item.headImg}}" class="headimg"/></view>
+          <view class="item-content">
+            <view class="item-top">
+              <text>{{item.nickName}}</text>
+              <view class="attention-status " wx:if="{{item.isAttention==1}}" catchtap='changeAttent' data-idx='{{index}}' data-id='{{item.userId}}'>已关注</view>
+              <view class="attention-status active" wx:if="{{item.isAttention==0}}" catchtap='changeAttent' data-idx='{{index}}' data-id='{{item.userId}}'>+关注</view>
+            </view>
+            <view>
+              <view class="itme-txt" wx:if="{{item.content.text!== ''}}">{{item.content.text}}</view>
+              <view class="item-imglist" wx:if="{{item.content.imgs.length>0}}" >
+                <image  wx:for="{{item.content.simgs}}" mode="aspectFill" wx:key="index" wx:for-item="img" data-list="{{item.content.imgs}}" data-src="{{img}}" catchtap="imgPreview"  src="{{img}}" />
+              </view>
+              <view class="item-video" wx:if="{{item.video}}">
+                <image hidden="{{item.isUrl}}" src="{{item.videoImg}}" mode="aspectFill" class="covimg" catchtap="openVideo" data-url="{{item.video}}" data-idx="{{index}}" />
+                <image hidden="{{item.isUrl}}" src="../../img/video.png"  class="icon-video" catchtap="openVideo" data-url="{{item.video}}" data-idx="{{index}}" />
+                <video wx:if="{{item.isUrl}}" id='myvideo{{index}}'  
+                    src="{{item.isUrl}}" 
+                    direction="0" 
+                    catchtap="closeVideo" 
+                    data-idx="{{index}}"
+                    autoplay="{{item.isUrl}}" 
+                    show-play-btn="{{false}}" 
+                    show-progress="{{false}}" 
+                    loop="{{true}}"
+                    show-fullscreen-btn="{{false}}">
+                </video>
+              </view>
+            </view>
+            <view class="item-time">
+              <text>{{filters.Time(item.sjc)}}</text>
+            </view>
+          </view>
+        </view>
+        <view class="item-bot">
+           <button wx:if="{{item.publicity == 1}}" open-type='share' class="share-btn bot-item" data-id="{{item.id}}" data-name="{{item.nickName}}">
+            <text class="iconfont share"></text>
+          </button>
+          <view class="bot-item" catchtap="godetail" data-id="{{item.id}}">
+            <text class="iconfont icon_huifu"></text>{{item.comments}}
+          </view>
+          <view catchtap="Praise" data-index="{{index}}" class="bot-item" wx:if="{{item.isPraise == 0}}">
+            <text class="iconfont icon_zan_nomal-_ "></text>{{item.praise}}
+          </view>
+          <view catchtap="Praise" data-index="{{index}}" class="bot-item" wx:if="{{item.isPraise == 1}}">
+            <text class="iconfont icon_zan_pressed- zan"></text>{{item.praise}}
+          </view>
+        </view>
+      </view>
+    </view>
+    <!--关注 -->
+    <view class="moving"  hidden="{{currentTab !== 1}}">
+      <view class="moving-item" wx:for="{{attention}}" wx:key="{{index}}">
+        <view class="item-top" catchtap="godetail" data-id="{{item.id}}">
+          <view class="item-headimg" catchtap="gouser" data-uid="{{item.userId}}"><image src="{{item.headImg}}" class="headimg"/></view>
+          <view class="item-content">
+            <view class="item-top">
+              <text>{{item.nickName}}</text>
+            </view>
+            <view>
+              <view class="itme-txt" wx:if="{{item.content.text!== ''}}">{{item.content.text}}</view>
+              <view class="item-imglist" wx:if="{{item.content.imgs.length>0}}" >
+                <image  wx:for="{{item.content.simgs}}" mode="aspectFill" wx:key="index" wx:for-item="img" data-list="{{item.content.imgs}}" data-src="{{img}}" catchtap="imgPreview"  src="{{img}}" />
+              </view>
+              <view class="item-video" wx:if="{{item.video}}">
+                <image hidden="{{item.isUrl}}" src="{{item.videoImg}}" mode="aspectFill" class="covimg" catchtap="openVideo" data-url="{{item.video}}" data-idx="{{index}}" />
+                <image hidden="{{item.isUrl}}" src="../../img/video.png"  class="icon-video" catchtap="openVideo" data-url="{{item.video}}" data-idx="{{index}}" />
+                <video wx:if="{{item.isUrl}}" id='myvideo{{index}}'  
+                    src="{{item.isUrl}}" 
+                    direction="0" 
+                    catchtap="closeVideo" 
+                    data-idx="{{index}}"
+                    autoplay="{{item.isUrl}}" 
+                    show-play-btn="{{false}}" 
+                    show-progress="{{false}}" 
+                    loop="{{true}}"
+                    show-fullscreen-btn="{{false}}">
+                </video>
+              </view>
+            </view>
+            <view class="item-time">
+              <text>{{filters.Time(item.sjc)}}</text>
+            </view>
+          </view>
+        </view>
+        <view class="item-bot">
+           <button wx:if="{{item.publicity == 1}}" open-type='share' class="share-btn bot-item" data-id="{{item.id}}" data-name="{{item.nickName}}">
+            <text class="iconfont share"></text>
+          </button>
+          <view class="bot-item" catchtap="godetail" data-id="{{item.id}}">
+            <text class="iconfont icon_huifu"></text>{{item.comments}}
+          </view>
+          <view catchtap="Praise" data-index="{{index}}" class="bot-item" wx:if="{{item.isPraise == 0}}">
+            <text class="iconfont icon_zan_nomal-_ "></text>{{item.praise}}
+          </view>
+          <view catchtap="Praise" data-index="{{index}}" class="bot-item" wx:if="{{item.isPraise == 1}}">
+            <text class="iconfont icon_zan_pressed- zan"></text>{{item.praise}}
+          </view>
+        </view>
+      </view>
+    </view>
+    <!-- 附近 -->
+    <view class="moving"  hidden="{{currentTab !== 2}}">
+      <view class="moving-item" wx:for="{{nearby}}" wx:key="{{index}}" >
+        <view class="item-top" catchtap="godetail" data-id="{{item.id}}">
+          <view class="item-headimg" catchtap="gouser" data-uid="{{item.userId}}"><image src="{{item.headImg}}" class="headimg"/></view>
+          <view class="item-content">
+            <view class="item-top">
+              <text>{{item.nickName}}</text>
+              <view class="attention-status active" wx:if="{{item.isAttention==1}}" catchtap='changeAttent' data-idx='{{index}}' data-id='{{item.userId}}'>已关注</view>
+              <view class="attention-status " wx:if="{{item.isAttention==0}}" catchtap='changeAttent' data-idx='{{index}}' data-id='{{item.userId}}'>+关注</view>
+            </view>
+            <view>
+              <view class="itme-txt" wx:if="{{item.content.text!== ''}}">{{item.content.text}}</view>
+              <view class="item-imglist" wx:if="{{item.content.imgs.length>0}}" >
+                <image  wx:for="{{item.content.simgs}}" mode="aspectFill" wx:key="index" wx:for-item="img" data-list="{{item.content.imgs}}" data-src="{{img}}" catchtap="imgPreview"  src="{{img}}" />
+              </view>
+              <view class="item-video" wx:if="{{item.video}}">
+                <image hidden="{{item.isUrl}}" src="{{item.videoImg}}" mode="aspectFill" class="covimg" catchtap="openVideo" data-url="{{item.video}}" data-idx="{{index}}" />
+                <image hidden="{{item.isUrl}}" src="../../img/video.png"  class="icon-video" catchtap="openVideo" data-url="{{item.video}}" data-idx="{{index}}" />
+                <video wx:if="{{item.isUrl}}" id='myvideo{{index}}'  
+                    src="{{item.isUrl}}" 
+                    direction="0" 
+                    catchtap="closeVideo" 
+                    data-idx="{{index}}"
+                    autoplay="{{item.isUrl}}" 
+                    show-play-btn="{{false}}" 
+                    show-progress="{{false}}" 
+                    loop="{{true}}"
+                    show-fullscreen-btn="{{false}}">
+                </video>
+              </view>
+            </view>
+            <view class="item-time">
+              <text>{{filters.Time(item.sjc)}}</text>
+            </view>
+          </view>
+        </view>
+        <view class="item-bot">
+           <button wx:if="{{item.publicity == 1}}" open-type='share' class="share-btn bot-item" data-id="{{item.id}}" data-name="{{item.nickName}}">
+            <text class="iconfont share"></text>
+          </button>
+          <view class="bot-item" catchtap="godetail" data-id="{{item.id}}">
+            <text class="iconfont icon_huifu"></text>{{item.comments}}
+          </view>
+          <view catchtap="Praise" data-index="{{index}}" class="bot-item" wx:if="{{item.isPraise == 0}}">
+            <text class="iconfont icon_zan_nomal-_ "></text>{{item.praise}}
+          </view>
+          <view catchtap="Praise" data-index="{{index}}" class="bot-item" wx:if="{{item.isPraise == 1}}">
+            <text class="iconfont icon_zan_pressed- zan"></text>{{item.praise}}
+          </view>
+        </view>
+      </view>
+    </view>
+    <!--我的圈-->
+    <view class="myring" hidden="{{currentTab !== 3}}">
+      <view class="myring-top">
+        <image class="top-headimg" src="{{headImg}}" />
+        <text>{{headName}}</text>
+      </view>
+      <view class="myring-content" wx:for="{{cliList}}" wx:key='index'>
+        <view class='myring-content-date' wx:if="{{item.year!=2019}}">{{item.year}}年</view>
+        <view class="myring-item" bindlongpress='Deldynamic' catchtap="godetail" wx:for="{{item.time}}" wx:for-item="it" wx:key="key" data-rd="{{it.isread}}" data-id='{{it.id}}' data-idx='{{index}}'>
+          <view class="myring-item-left">
+            <!-- <text class="today" wx:if="{{it.today}}">{{it.today}}</text> -->
+            <text class="today">{{it.day}}</text>
+            <text class="">{{it.month}}月</text>
+            <view  wx:if="{{it.isread == 0}}" class="red"></view>
+          </view>
+          <view class="myring-item-right" >
+            <image wx:if="{{it.content.imgs.length>0}}" class="myring-item-right-img" mode="aspectFill" src="{{it.content.simgs[0]}}" />
+            <image wx:if="{{it.video}}" class="myring-item-right-img" mode="aspectFill" src="{{it.videoImg}}" />
+            <text  wx:if="{{it.video}}" class="video-tips">视频</text>
+            <view class="myring-item-content" wx:if="{{it.content.text}}">
+              <view class="myring-item-txt">{{it.content.text}}</view>
+              <view class="myring-item-txt-bot" wx:if="{{it.content.imgs.length>0}}">共{{it.content.imgs.length}}张</view>
+              <!-- <view class="myring-item-video" wx:if="{{it.video}}"></view> -->
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <botTip wx:if="{{currentTab==0}}" havedata="{{pagedata}}" length="{{friendList.length}}"></botTip>
+</view>
+<!-- <video id='myvideo' class='{{!fullScreen ?"hide":"show"}}' src="{{video}}" direction="0" catchtap="closeVideo"></video> -->
+<Auth class="Auth" haveUser="{{!haveuser}}" bind:Login="login"></Auth>
+<view class="tishi" wx:if="{{cliList.length == 0 && haveuser && isclose}}">
+    <image class="tishi-bg" src="../../img/tips_bg.png" />
+    <image src="../../img/x_icon.png" class="icon-cha" bindtap="closeto"/>
+    <view class="ts-txt">发布你的第一篇路亚圈</view>
+</view>

@@ -1,0 +1,156 @@
+
+<image src="../../img/banner.png" class="banner" />
+<view class="item">
+    <!-- <view class="item-top mgt" >第一章：总则</view> -->
+    <view class="item-h1">俱乐部名称：<text class="">天高路亚俱乐部</text></view>
+    <view class="item-h1 mgt" >俱乐部性质：<text class="">非赢利性组织</text></view>
+    <view class="item-h1 sp">
+        <view class="item-left-h1">天高的主旨：</view>
+        <view class="item-right-h1">努力传授针对各种对象鱼的认识和路亚运动的钓技与钓具的认识；宣传和普及尊重生命、爱护环境、保护生态的正确路亚运动理念！</view>
+    </view>
+    <view class="item-h1 sp" >
+        <view class="item-left-h1">俱乐部宗旨：</view>
+        <view class="item-right-h1">公益性质的普及路亚运动，为会员提供更多价值服务！</view>
+    </view>
+    <view class="item-h1">俱 乐 部 平 台：</view>
+    <view class="item-h1">·官方QQ交流群：<text class="">238168823</text></view>
+    <view class="item-h1">·官方微信交流群：<text class="">准会员加入</text></view>
+    <view class="item-h1">·官方微信订阅号：<text class="">天高路亚俱乐部（SKYHLURE）</text></view>
+    <view class="item-h1 mgt" >·天高合作媒体：<text class="">路亚帮                             </text></view>
+    <view class="item-h1 mgt">俱乐部会员：不限地区、年龄、性别、国籍的路亚爱好者，赞同天高路亚俱乐部的主旨和宗旨，并接受和执行俱乐部制定的相关规定。</view>
+    <view class="item-h1 mgt6"><text>注明：</text>俱乐部遵守《中华人民共和国》宪法法律，法规，维护国家和社会的公共利益。</view>
+    <view class="item-top mgt">比赛部分</view>
+    <view class="item-top-h1 mgt">天高路亚俱乐部 会员锦标赛：</view>
+    <view class="item-top-h1 mgt">赛制：4+1赛制，即各赛区4场积分赛，1场总决赛</view>
+    <view class="item-h2 mgt">
+      <text class="blod">积分赛：</text>
+      <view class="p">参加：当年具有本俱乐部会籍的会员，所在地区如已建立赛区，方可报名参加俱乐部会员积分赛，即CLEC。</view> 
+      <view class="p">报名：为满足非赛区会员参加CLEC赛事，可向就近赛区报名参加，但不可同时参加2个或2个以上赛区。</view> 
+      <text class="blod">总决赛：</text>
+      <view class="p">参加：俱乐部各赛区按晋级名额数量，以4场中最好3场成绩计算，排名依次进入总决赛。</view> 
+      <view class="p">形式：单人单艇，2天比赛，每天7小时按5条鲈鱼记重排名决出年度俱乐部冠军，即"天高一哥"称号。</view> 
+      <text class="blod">总决赛部分：</text>
+      <view class="p">由主办方与赞助商共同设定</view> 
+      <view class="p">赛事最终解释权归天高路亚俱乐部赛组委所有</view> 
+    </view>
+    <view class="item-top-h1 mgt">天高路亚俱乐部南北交流赛：</view>
+    <view class="item-h2 mgt">
+       <view class="p">参加：当年具有本俱乐部会籍的会员均可报名参加；</view> 
+       <view class="p">报名：各省份会制定报名限额，并以报名申请的时间为准，报满为止；</view> 
+    </view>
+    <text class="blod">积分赛部分：</text>
+    <view class="p">费用：本俱乐部所有赛事，会员无报名费、仅承担钓场钓费即可；</view>
+    <view class="p">奖励：本俱乐部比赛设定奖品及纪念品，无奖金设定。</view>
+    <view class="p"><text class="">其他：</text>
+      <view class="p">· 俱乐部不定期在各区域组织中小型娱乐性竞技赛事；</view>
+      <view class="p">· 不定期组织与其他地区团体、队伍、俱乐部的交流赛、对抗赛；</view>
+    </view>
+    <view class="item-h1 mgt6"><text class="">补充：</text>报名选手年龄16-70岁成年人，如有未成年会员报名比赛，岸钓赛须选手监护人陪同，如船钓赛参加，只允许与监护人同组同船。</view>
+    <view class="item-top mgt">培训部分</view>
+    <view class="item-top-h1">培训内容：</view>
+    <view class="item-h1">1、针对路亚钓法的作钓知识培训；</view>
+    <view class="item-h1">2、针对路亚野钓知识培训；</view>
+    <view class="item-h1">3、针对竞技比赛的心态调整、准备工作及比赛过程中战术知识；</view>
+    <view class="item-h1">4、针对路亚钓法的钓具选择及使用知识培训；</view>
+    <view class="item-h1">5、各种钓组及新钓组的使用相关培训；</view>
+    <view class="item-h1">6、作钓过程中注意事项等相关知识；</view>
+    <view class="item-h1">7、辅助设备的使用等相关知识；</view>
+    <view class="item-h1">8、附件及装备方面知识培训及推介等。</view>
+    <view class="item-h1 mgt">9、如会员有路亚运动相关特定知识需学习，请于各分站会长协调。</view>
+    <view class="item-top-h1">培训方式：</view>
+    <view class="item-h1">·现场培训：</view>
+    <view class="item-h1 mgt">主要以目前本俱乐部CLEC赛区为主，由本俱乐部教练、优秀钓手或合作品牌签约钓手现场进行培训；</view>
+    <view class="item-h1">·在线培训课：</view>
+    <view class="item-h1">微信群：本俱乐部官方微信群在特定时段进行；</view>
+    <view class="item-h1">Q Q群：本俱乐部QQ群在特定时段进行；</view>
+    <view class="item-h1 mgt">直播类：提前知会俱乐部会员培训时间及直播平台。</view>
+    <view class="item-h1">·培训频次：</view>
+    <view class="item-h1 mgt6">本俱乐部培训每月不少于1次；年度培训次数不少于15次。</view>
+    <view class="item-top mgt">活动部分</view>    
+    <view class="item-top-h1">俱乐部活动：</view>
+    <view class="item-h1">· 设计休闲钓、交流钓、野钓、探钓、海钓、试钓及自驾游钓，并不定期选择国外游钓；</view>
+    <view class="item-h1">· 俱乐部自2018年成立游钓团，设定团长/领队，针对国内外路亚对象鱼资源进行淡水、海水钓，如参加游钓团，须提前办理个人护照，并保证个人身体健康；</view>
+    <view class="item-h1">· 俱乐部联系并协调特约钓场或指定钓具、户外用品、食宿、聚会场地等经营商家，为会员提供消费优惠折扣；</view>
+    <view class="item-h1">· 俱乐部接受会员请托，协调联系拼车及相关事宜，会员间资源共享，维护团结和谐发展。</view>
+    <view class="item-h1 mgt">· 以会员钓技建立进阶级别制度：教练（级）、一哥（级）、会员。</view>
+    <view class="item-h1 mgt6"><text class="">注明：</text>各称谓均为年度制，一年后凭前一年俱乐部积分赛及活动出勤、培训等方面综合评定再次设定。</view>
+    <view class="item-top mgt">会员部分</view>
+    <!-- <view class="item-top-h1 mgt">俱乐部会员资格为年度制，俱乐部周年暨俱乐部会员上年制会员身份结束，如老会员愿保留会员身份，须重新申请会员码来购置新版俱乐部战袍，以示续俱乐部会员资格（未提出申请将被视为离开本俱乐部）。</view> -->
+    <view class="item-top-h1">第一条：会员条件</view>
+    <view class="item-h1">1·必须遵守国家宪法法律法规；</view>
+    <view class="item-h1">2·赞同俱乐部宗旨，并接受和执行俱乐部制定的相关规定；</view>
+    <view class="item-h1">3·不限地区、年龄、性别、国籍；</view>
+    <view class="item-h1">4·积极健康乐观的心态；</view>
+    <view class="item-h1">5·乐于助人、愿意分享知识及帮助他人；</view>
+    <view class="item-h1 mgt">6·无不良嗜好，如赌博、吸毒、蓄意骚扰他人、外借他人财物等。</view>
+    <view class="item-top-h1">第二条：会员权利</view>
+    <view class="item-h1">1·可享受会员专有的俱乐部会员赛事；</view>
+    <view class="item-h1">2·免费接受俱乐部主办的竞技课程培训；</view>
+    <view class="item-h1">3·享受俱乐部组织的钓技、装备交流活动；</view>
+    <view class="item-h1">4·享受俱乐部的签约钓场优惠；</view>
+    <view class="item-h1">5·享受俱乐部的签约卖场、钓具超市特殊优惠；</view>
+    <view class="item-h1">6·享受俱乐部的签约淘宝店特殊优惠；</view>
+    <view class="item-h1">7·俱乐部内部成绩优异者，优先推荐至路亚钓具品牌商成为名誉签约钓手；</view>
+    <view class="item-h1 mgt">8·享受俱乐部赞助商的产品试用、试钓等机会；</view>
+    <view class="item-top-h1">第三条：会员责任和义务</view>
+    <view class="item-h1">1·会员有遵守《中华人民共和国》宪法法律法规的责任，不得以会员和俱乐部名义从事违法犯罪活动或者用作其他损害俱乐部和会员的用途；</view>
+    <view class="item-h1">2·会员遵守路亚钓法的生态环保理念，保护鱼类及生态资源；</view>
+    <view class="item-h1">3·俱乐部强调放流，主张关爱生命、保护生态，会员应积极将钓获放流（重点）；</view>
+    <view class="item-h1">4·树立积极健康的环保观念，爱护作钓环境，保护环境卫生，出钓过程中严禁乱扔垃圾，须将个人垃圾装入垃圾袋，合理处理；</view>
+    <view class="item-h1">5·俱乐部合作品牌可使用有会员肖像的平面或影像素材在非具有销售用途的推广内容；</view>
+    <view class="item-h1">6·关心俱乐部的活动及发展动态，与俱乐部保持经常联系，协助俱乐部的宣传活动，拓展会员及能所能及的事情；</view>
+    <view class="item-h1">7·共享将有价值的路亚咨询、路亚活动、美食照片、路亚日记，路亚体验，钓法介绍等上传至俱乐部论坛网站，丰富俱乐部的路亚文化；</view>
+    <view class="item-h1">8·积极参加俱乐部举办的各种活动，比赛，联谊，交流会，并为之出谋划策，提出对俱乐部的意见和建议，贡献自己的一份力量；</view>
+    <view class="item-h1">9·凡本俱乐部组织的活动，会员须着俱乐部战袍参加；</view>
+    <view class="item-h1">10·积极配合俱乐部在当地的活动组织，辅助当地活动开展；</view>
+    <view class="item-h1 mgt">11·在钓场遇到俱乐部会员，要主动相互打招呼，相互帮助。</view>
+    <view class="item-top-h1">第四条：会员退出俱乐部</view>
+    <view class="item-h1">1·会员可随时向俱乐部提出退会申请，同时失去会员权利；</view>
+    <view class="item-h1 mgt">2·会员因严重违反俱乐部章程及相关制度规定，给俱乐部或其他会员造成不良影响的，经查实俱乐部有权注销其会员资格。</view>
+    <view class="item-top-h1">第五条：惩罚制度</view>
+    <view class="item-h1">1.不遵守俱乐部章程，造成不良影响，多次提示无效者，清退；</view>
+    <view class="item-h1">2.会员参加俱乐部内部赛事或外部赛事出现作弊行为者，清退；</view>
+    <view class="item-h1">3.个人违法乱纪，给社会，其他会员及俱乐部集体荣誉受损时，清退；</view>
+    <view class="item-h1">4.活动交流，QQ群聊天，论坛，聚会，等交流，破坏他人家庭和谐，扰乱聊天环境秩序，及不文明行为者，清退；</view>
+    <view class="item-h1">5.非俱乐部合作品牌、商家等机构，不得以任何形式在俱乐部社交平台、活动、培训及比赛现场以品牌标识、产品、服务的进行露出和告知行为！违反者清退；</view>
+    <view class="item-h1">6.在俱乐部中拉帮结派，搬弄是非、结党营私者，清退；</view>
+    <view class="item-h1">7.骚扰女性或者男性会员者，清退；</view>
+    <view class="item-h1">8.会员不得向俱乐部其他会员以种种形式进行借钱，发现后提出警告，如在约定时间内不予以偿还者，清退；</view>
+    <view class="item-h1">9.在俱乐部主办的比赛、交流、培训、游钓等活动中，如有出现侮辱、谩骂甚至恶意身体接触者，清退；</view>
+    <view class="item-h1">10.遵守路亚的发展理念，爱惜鱼类生态资源，对于不文明的任何钓鱼行为，劝导不听者，清退；</view>
+    <view class="item-h1">11.会员未经俱乐部管理人员许可，擅自发商业广告或其他商业通知和公告者，劝导不听者，清退。</view>
+    <view class="item-h1 mgt"><text class="">注明：</text>所被清退者，在俱乐部官方媒体做以通告，进入俱乐部会员黑名单，并3年之内不可再次申请会员。</view>
+    <view class="item-top-h1">第六条：会员须知</view>
+    <view class="item-h1">1·注册会员前，须认真阅读本俱乐部《章程》；</view>
+    <view class="item-h1">2·须认同本俱乐部《章程》，并能够愿意遵守《会员制度》的条款；</view>
+    <view class="item-h1">3·自觉遵守俱乐部的有关规章制度，维护俱乐部的声誉，不做有损俱乐部利益的事情；</view>
+    <view class="item-h1 mgt">4·俱乐部将充分考虑每次活动的安全性，会采取适当的安全防护措施，对于活动中个人因数或不可抗拒的自然因数造成的事故和伤害，俱乐部不负法律，经济，医疗责任，建议会员按具体情况购买保险。</view>
+    <view class="item-top-h1">第七条：成为会员（既申请会员）</view>
+    <view class="item-h1 mgt">成为天高路亚俱乐部会员，须认可《会员制度》，并履行和遵守《会员制度》每一项条款，方可申请会员。</view>
+    <view class="item-top-h1">申请注册会员方法</view>
+    <view class="item-h1"><text class="">第一步：</text>加入俱乐部QQ群：238168823</view>
+    <view class="item-h1"><text class="">第二步：</text>关注俱乐部公众微信号：天高路亚俱乐部 或 SKYHLURE;</view>
+    <view class="item-h1"><text class="">第三步：</text>须提供以下信息：</view>
+    <view class="item-h1">姓名：</view>
+    <view class="item-h1">网名：</view>
+    <view class="item-h1">年龄：</view>
+    <view class="item-h1">性别：</view>
+    <view class="item-h1">手机：</view>
+    <view class="item-h1">目前所在地：_____省_____市个人免冠照片</view>
+    <view class="item-h1"><text class="">个人免冠照片：</text>不小于800 X 800像素</view>
+    <view class="item-h1 mgt"><text class="">注明：</text>会员提供的信息仅作为俱乐部与会员间联系所用，并严格保密。</view>
+    <!-- <view class="item-top-h1 mgt">以上信息发到邮箱：14715360@qq.com</view> -->
+    <view class="item-h1 mgt">申请注册会员的朋友发送申请信息后，在2个工作日内会收到俱乐部工作人员发回的短信息，信息内容中夹带一个随机生成的4位会员码，通过此4位可在指定淘宝店中订购俱乐部战袍（俱乐部路亚防晒比赛服1件、天高路亚防晒T恤1件和俱乐部徽帽1顶），即可完成俱乐部会员注册。</view>
+    <view class="item-top-h1">备注：</view>
+    <view class="item-h1">· 俱乐部战袍为2019版设计（每年度开发新版本），会员价238元包邮</view>
+    <view class="item-h1 mgt">· 具体申请内容请注意俱乐部官方微信群、QQ群及微信公众号的通知。</view>
+    <view class="item-h1"><text class="">第八条：</text>本章程未尽事宜，将在今后指定其他规则和管理办法中补充，完善。</view>
+    <view class="item-h1"><text class="">第九条：</text>本会员章程，本俱乐部具有修改和最终解释权。</view>
+</view>
+<view class="check">
+    <image catchtap="change" wx:if="{{!check}}" class="icon-gou" src="../../img/gou_nomal.png" />
+    <image catchtap="change" wx:if="{{check}}"class="icon-gou" src="../../img/gou_pressed.png" />
+    <text>我已仔细阅读俱乐部章程</text>
+</view>
+<view class="btn" catchtap="gologin">注册成为2019~2020天高会员</view>
+<view class="white"></view>

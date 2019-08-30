@@ -1,0 +1,18 @@
+  <view class="article" wx:for="{{List}}" wx:key="index" bindlongpress='DelCollect'  bindtap="gotitle" data-id ="{{item.id}}" data-idx="{{index}}">
+    <view class="article-item">
+      <view class="article-item-left">
+        <view class="article-item-title">
+        <text wx:if="{{item.name != null}}">[{{item.name}}]  </text>
+        {{item.title}}</view>
+        <view class="article-item-bottom">
+          <text class="iconfont icon_fire fire" wx:if="{{item.ishot == 1 }}"></text>
+          <text class="brand" wx:if="{{item.isbrand}}">品牌</text>
+          <text>{{ item.nickName || item.realName}}</text>
+          <text>{{item.comments}}评论</text>
+          <!-- <text>{{item.createTime}}</text> -->
+        </view>
+      </view>
+      <image src="{{item.coverImg}}" class="article-item-right" mode="aspectFit" />
+    </view>
+  </view>
+

@@ -1,0 +1,15 @@
+.myring{background-color: #fff;}
+.myring-top{height: 130rpx;display: flex;padding: 0 25rpx;line-height: 130rpx;box-sizing: border-box;border-top: 1rpx solid #eee;border-bottom: 1rpx solid #eee;}
+.myring-top>text{margin-left: 25rpx;font-size: 34rpx;color:#576b95;}
+.top-headimg{height: 96rpx;width: 96rpx;border-radius: 100%;align-self: center;}
+.myring-item-right-img{width: 150rpx;height: 150rpx;}
+.myring-item{display: flex;padding: 20rpx;}
+.myring-content{margin-top: 20rpx;}
+.myring-item-left{width: 150rpx;}
+.myring-item-right{display: flex;position: relative;}
+.myring-item-content{width: 390rpx;font-size: 30rpx;padding: 0 10rpx; position: relative;}
+.myring-item-left{font-size: 24rpx;font-weight: bold;}
+.myring-item-left .today{font-size: 50rpx;}
+.myring-item-txt{overflow: hidden;text-overflow: ellipsis;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;}
+.myring-item-txt-bot{color:#666;}
+.video-tips{position: absolute;top:0;left: 0;color: #fff;font-size: 24rpx;}

@@ -1,0 +1,9 @@
+<view class="loading" wx:if="{{loading}}">
+    <image src="../../img/logo.png" class="logo" />
+    <image src="../../img/denglu_gou.png" class="icon-gou" />
+</view>
+<view class="login" wx:if="{{!loading}}">
+    <image src="../../img/bg.gif" class="bg" />
+    <image src="../../img/tiangaoluya_logo.png" class="logo-tg" />
+    <view class="btn" catchtap="govip">注册成为会员</view>
+</view>

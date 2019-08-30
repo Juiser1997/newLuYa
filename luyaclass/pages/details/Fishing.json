@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "botTip": "../../component/BotTip/BotTip"
+  },
+  "navigationBarTitleText": "钓场"
+}

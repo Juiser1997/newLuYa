@@ -1,0 +1,57 @@
+<view class="head">
+  <headNav nav="{{headnav}}" currentTab="{{currentTab}}" bind:myNavChangeTab="changeTab" width="index"></headNav>
+</view>
+<view class="cont">
+  <Carouse imgs="{{Img}}" bind:titleId="godetails"></Carouse>
+  <view class="mid-nav" hidden="{{currentTab!==0}}">
+    <navigator wx:for="{{midnav}}" wx:key="index" class="mid-nav-item" hover-class="none" url="{{item.url}}">
+    <image  src="{{item.src}}" mode="aspectFit|aspectFill|widthFix"></image>
+    <text>{{item.name}}</text>
+    </navigator>
+  </view>
+  <view class="Eventsai" hidden="{{currentTab!== 2}}">
+    <view class="Eventsai-item" catchtap="texbarTap" data-id="2019061814492945170" data-idx="0">
+      <image src="../../img/guonei3.png" wx:if="{{texTab == 1}}" />
+      <image src="../../img/guonei.png" wx:else/>
+    </view>
+    <navigator class="Eventvip" hover-class="none" url="/pages/details/loginOne">
+      <image src="../../img/tiangaozhuce.png" />
+    </navigator>
+    <view class="Eventsai-item" catchtap="texbarTap" data-id="2019061814493754700" data-idx="1">
+      <image src="../../img/guowai1.png" wx:if="{{texTab == 0}}"/>
+      <image src="../../img/guowai2.png" wx:else/>
+    </view>
+  </view>
+  <view class="Event" hidden="{{currentTab!== 4}}">
+    <view class="Event-item" catchtap="texbarTap" data-id="2019061814501364620" data-idx="0">
+      <image src="../../img/haishuidiao_nomal.png" wx:if="{{texTab == 1}}"/>
+      <image src="../../img/haishuidiao_pressed.png" wx:else/>
+    </view>
+    <view class="Event-item" catchtap="texbarTap" data-id="2019061814502058230" data-idx="1">
+      <image src="../../img/danshuidiao_nomal.png" wx:if="{{texTab == 0}}" />
+      <image src="../../img/danshuidiao_pressed.png" wx:else/>
+    </view>
+  </view>
+  <view class="Event" hidden="{{currentTab!== 5}}">
+    <view class="Event-item" catchtap="texbarTap" data-id="2019072211023645030" data-idx="0">
+      <image src="../../img/chuandiao_nomal.png" wx:if="{{texTab == 1}}"/>
+      <image src="../../img/chuandiao_pressed.png" wx:else/>
+    </view>
+    <view class="Event-item" catchtap="texbarTap" data-id="2019072211024967450" data-idx="1">
+      <image src="../../img/andiao_nomal.png" wx:if="{{texTab == 0}}" />
+      <image src="../../img/andiaopressed.png" wx:else/>
+    </view>
+  </view>
+  <midNav  only="{{midstyle}}" midNav="{{Nav}}" midNavTab="{{texTab}}" modalHidden="{{currentTab!== 1 && currentTab!== 3}}" bind:myMidNavChangeTab="texbarTap"></midNav>
+  <titleList List="{{newslist}}" bind:titleId="godetails"></titleList>
+  <view class="nodata" wx:if="{{newslist.length == 0}}">
+    <text>暂无更多数据了</text>
+  </view>
+  <BotTip havadata = "{{pagedata}}" length="{{newslist.length}}"></BotTip>
+</view>
+<view class="tips" wx:if="{{tishi}}" catchtap="changetips">
+  点击<image src="../../img/tips_icon1.png" class="icon-san" /> [添加到我的小程序]，快速找到路亚帮！
+  <image src="../../img/tips_icon2.png" class="icon-cha" />
+</view>
+<view class="sanjiao" wx:if="{{tishi}}"></view>
+

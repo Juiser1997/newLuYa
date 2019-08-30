@@ -1,0 +1,18 @@
+.banner{width: 750rpx;height: 336rpx;}
+.item{padding: 0 30rpx;}
+.item-top{font-weight: bold;font-size: 36rpx;text-align: center}
+.item-h1{font-size: 26rpx;color:#333;line-height: 48rpx;}
+.blod{display: block;font-weight: bold;font-size: 26rpx;margin-top: 30rpx}
+.sp{display: flex;}
+.item-h1>text{font-weight: bold;}
+.item-left-h1{width: 160rpx;}
+.item-right-h1{width: calc(100% - 160rpx);font-weight: bold}
+.mgt{margin-bottom: 45rpx;}
+.mgt6{margin-bottom: 60rpx;}
+.item-top-h1{font-size: 26rpx;color: #333;font-weight: bold;}
+.p{font-size: 26rpx;color: #333;line-height: 36rpx;}
+.item-center{font-size: 30rpx;font-weight: bold;}
+.icon-gou{width: 30rpx;height: 30rpx;align-self: center;margin-right: 10rpx;}
+.check{display: flex;justify-content: center;margin-top: 100rpx;font-size: 26rpx;color: #333;}
+.btn{width: 640rpx;height: 100rpx;line-height: 100rpx;color: #fff;text-align: center;background-color: #FF3401;border-radius: 100rpx;margin: 55rpx;}
+.white{width: 750rpx;height: 100rpx;}

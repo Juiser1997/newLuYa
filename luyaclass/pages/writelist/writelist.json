@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "botTip": "../../component/BotTip/BotTip",
+    "noData": "../../component/noData/noData"
+  }
+}

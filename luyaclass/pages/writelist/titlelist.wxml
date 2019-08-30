@@ -1,0 +1,46 @@
+<view class="page">
+  <image src="../../img/gerenzhongxin_bg.png" class="bg-img"></image>
+  <view class="top">
+    <view class="top-info">
+      <image src="{{headImg}}" class="info-left"/>
+      <view class="info-right">
+          <view class="right-user">
+            <text class="nickName">{{nickName}}</text>
+            <view class="mercBox" wx:if="{{roleId == '2019080214444277130'}}">商家</view>
+            <view class="brandBox" wx:if="{{roleId == '2019080214441887640'}}">品牌</view>
+          </view>
+          <view class="intro">{{remark}}</view>
+      </view>
+    </view>
+    <view class="top-data">
+      <view class="data-tip">
+        <text class="tipOne">{{fansNumber}}</text>
+        <text class="tipTwo">粉丝</text>
+      </view>
+      <view class="data-tip">
+        <text class="tipOne">{{contentNumber}}</text>
+        <text class="tipTwo">文章</text>
+      </view>
+      <view class="data-tip">
+        <text class="tipOne">{{praiseNumber}}</text>
+        <text class="tipTwo">获赞</text>
+      </view>
+    </view>
+    <view class="top-mer" wx:if="{{roleId == '2019080214444277130'}}">
+      <image src="../../img/chakanshangjia.png" class="chakanshangjia"></image>
+      <text bindtap="go">查看商家店铺</text> 
+    </view>
+    <view class="top-mer" wx:if="{{roleId == '2019080214441887640'}}">
+      <image src="../../img/chakanshangjia.png" class="chakanshangjia"></image>
+      <text bindtap="go">查看品牌店铺</text> 
+    </view>
+  </view>
+  <view style="background-color:#fff;margin-top:390rpx">
+    <titleList List="{{newslist}}" bind:titleId="godetails"></titleList>
+    <view class="nodata" wx:if="{{newslist.length == 0}}">
+      <text>暂无更多数据了</text>
+    </view>
+    <BotTip havadata = "{{pagedata}}" length="{{newslist.length}}"></BotTip>
+  </view>
+</view>
+

@@ -1,0 +1,19 @@
+<wxs module="filters" src="../../utils/time.wxs"></wxs>
+<view>
+  <view class="comment-item" wx:for="{{commentList}}" wx:key="key">
+    <view class="comment-top" >
+      <text class="" decode="{{true}}">发表评论&nbsp;&nbsp;&nbsp;</text>{{filters.Time(item.sjc)}}
+    </view>
+    <view class="comment-wrap">
+      {{item.content}}
+    </view>
+    <view class="comment-bot" bindtap='godetails' data-id='{{item.contentId}}'>
+      <view class="comment-title">
+        <text>【{{item.title}}】</text>
+      </view>
+    </view>
+  </view>
+   <botTip  havedata="{{pagedata}}" length="{{commentList.length}}" tips="没有更多评论了"></botTip>
+   <knoData len="{{commentList}}"><view >暂无评论</view></knoData>
+</view>
+

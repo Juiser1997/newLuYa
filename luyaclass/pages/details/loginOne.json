@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "Auth":"../../component/Auth/Auth"
+  },
+  "navigationBarTitleText": "注册天高路亚"
+}

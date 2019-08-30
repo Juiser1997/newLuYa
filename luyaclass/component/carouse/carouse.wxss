@@ -1,0 +1,6 @@
+.banner-box{height: 350rpx;width: 700rpx;border-radius: 10rpx;margin: 0 auto;}
+.swiper{height: 350rpx;width: 700rpx;}
+.swiper-item{width: 100%;height: 100%;}
+.banner-box image{border-radius: 10rpx;height: 350rpx;width: 700rpx;}
+
+

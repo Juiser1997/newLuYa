@@ -1,0 +1,14 @@
+.head-nav{display: flex;height: 88rpx;justify-content: center;box-sizing: border-box;border-bottom: 1rpx solid #ddd;}
+.head-nav .item{display: flex;flex: auto;flex-direction: column;align-self: center;align-items: center;font-size: 32rpx;line-height: 84rpx;}
+.head-nav .active{color: #4b6dff;}
+.item-line{height: 4rpx;width: 260rpx;border-radius: 4rpx;}
+.item-line.active{background-color:#4b6dff;}
+.attention-item{display: flex;height: 126rpx;line-height: 126rpx;}
+.attention-item-headimg{height: 80rpx;width: 80rpx;padding: 30rpx;}
+.attention-item-right{display: flex;justify-content: space-between;width: calc(100% - 140rpx);box-sizing: border-box;padding-right: 20rpx;border-bottom: 1rpx solid #ddd;}
+.attention-item:nth-last-child(1) .attention-item-right{border:none;}
+.attention-item-right .attention-status{line-height: 48rpx;width: 120rpx;color:#999;border:2rpx solid #ccc;
+    font-size: 28rpx;text-align: center;align-self: center;border-radius: 5rpx;}
+.attention-item-right .active{color: #4b6dff;border:2rpx solid #4b6dff;}
+.itme-txt{color: #0c0c0c;font-size: 34rpx;}
+.status-span{border:2rpx solid #999;}

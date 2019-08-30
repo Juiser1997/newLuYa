@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "titleList":"../../component/title-list/title-list",
+    "botTip": "../../component/BotTip/BotTip",
+    "noData": "../../component/noData/noData"
+  },
+  "navigationBarTitleText": "阅读纪录"
+
+}

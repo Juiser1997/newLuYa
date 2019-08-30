@@ -1,0 +1,35 @@
+<wxs module="filters" src="../../utils/time.wxs"></wxs>
+<view class="page">
+    <view class="top">
+        <image class="comment-head" src="{{comment.headImg}}"/>
+        <view class="top-right">
+            <view class="userName">{{comment.nickName}}<text class="remark">楼主</text></view>
+            <view class="content">{{comment.content}}</view>
+            <view class="top-bot">
+                <text class="time">{{filters.Time(comment.sjc)}}</text>
+                <view class="top-bot-right">
+                    <view catchtap="ReplyPraise"  wx:if="{{comment.isPraise == 1}}"><text class="iconfont icon_zan_pressed- zan"></text>{{comment.praise}}</view>
+                    <view catchtap="ReplyPraise"  wx:if="{{comment.isPraise == 0}}"><text class="iconfont icon_zan_pressed- grey-zan"></text>{{comment.praise}}</view>
+                    <view catchtap="Report" ><text class="iconfont icon_jubao1"></text>举报</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="reply">
+        <view class="reply-top">回复 <text>({{comment.replay}})</text></view>
+        <view class="reply-item" wx:for="{{list}}" wx:key="li">
+            <image class="comment-head" src="{{item.headImg}}"/>
+            <view class="item-right">
+                <view class="item-right-top">
+                     <view class="userName">{{item.nickName}}</view> <view class="time">{{filters.Time(item.sjc)}}</view>
+                </view>
+               <view class="content" bindlongpress='DeleteReply' data-idx="{{index}}" data-user="{{item.userId}}">{{item.content}}</view>
+            </view>
+        </view>
+    </view>
+</view>
+<BotTip havedata ="{{havedata}}" length="{{list.length}}"></BotTip>
+<view class=" {{IPX ? 'white whiteIPX': 'white'}}"></view>
+<view class=" {{IPX ? 'replybox replyboxIPX' : 'replybox'}}">
+    <input type="text" placeholder="发表回复..."  placeholder-class="input-placeholder" value="{{replyText}}" confirm-type="done" bindconfirm="Reply" bindinput="ReplyText" cursor-spacing="20"/>
+</view>

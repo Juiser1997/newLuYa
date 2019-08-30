@@ -1,0 +1,57 @@
+<view class="page">
+    <view class="text-area" hidden="{{autoplay}}">
+        <textarea class="" placeholder="这一刻的想法" maxlength="140" bindinput="editText" value="{{text}}"></textarea>
+        <view class="txt-tips">还剩{{texNum}}字</view>
+    </view>
+    <view class="photo-area">
+        <view wx:for="{{imgs}}" wx:key="index" data-list = "{{imgs}}" data-src="{{item}}" bindtap="imgPreview" class="imgbox" hover-class="img-hov" >
+            <image src="{{item}}"  bindlongpress='DeleteImg' data-inx="{{index}}" mode="aspectFill" />
+        </view>
+        <view class="videobox" wx:if="{{vid.length>0}}">
+            <video id='myvideo'  
+                src="{{url}}" 
+                direction="0" 
+                catchtap="closeVideo" 
+                autoplay="{{autoplay}}" 
+                show-play-btn="{{false}}" 
+                show-progress="{{false}}" 
+                loop="{{true}}"
+                show-fullscreen-btn="{{false}}">
+                <cover-image  hidden="{{autoplay}}" src="{{viderImg[0]}}" mode="aspectFill" class="covimg" catchtap="govideo" data-url="{{vid[0]}}"></cover-image>
+                <cover-image  hidden="{{autoplay}}" src="../../img/video.png"  class="icon-video" catchtap="govideo" data-url="{{vid[0]}}"></cover-image>
+            </video>
+        </view>
+        <view class="photo-item" wx:if="{{imgs.length <1 && vid.length < 1}}">
+            <view class="check-photo" bindtap="checkphoto" >
+                <text class="iconfont icon_zhaopian item-photo-icon"></text>
+            </view>
+            <text class="photo-item-txt">照片</text>
+        </view>
+        <!-- <view class="photo-item" wx:if="{{imgs.length <1 && vid.length <1 }}">
+            <view class="check-photo" bindtap="checkvideo">
+                <text class="iconfont icon_xiangji item-photo-icon"></text>
+            </view>
+            <text class="photo-item-txt">拍摄</text>
+        </view> -->
+        <view  class="img-add" wx:if="{{ imgs.length <9 && imgs.length>0 && vid.length <1 }}" bindtap="checkphoto">
+            <text class="iconfont plus-add add"></text>
+        </view>
+    </view>
+    <view class="btn-group">
+        <view class="btn-group-item" bindtap="getaddress">
+            <text class="iconfont icon_dingwei btn-item-icon"></text>
+            <text class="address">{{address || '所在位置'}}</text>
+        </view>
+        <view class="btn-group-item" bindtap="releaseStatus">
+            <text class="iconfont icon_gongkai btn-item-icon"></text>
+            <text wx:if="{{status == 1}}">公开发表</text>
+            <text wx:if="{{status == 0}}">私有</text>
+        </view>
+    </view>
+    <view class="btn-group-release">
+        <view class="release-btn" bindtap='fabuBtn'>发布</view>
+        <view class="cancel" bindtap="cancel">取消</view>
+    </view>
+</view>
+
+

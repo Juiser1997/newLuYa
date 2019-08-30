@@ -1,0 +1,21 @@
+<view class="cont">
+    <Carouse imgs="{{Img}}" bind:titleId="godetails"></Carouse>
+    <view class="Event" wx:if="{{id == '2019062115141189900'}}">
+      <view class="Event-item" catchtap="texbarTap" data-id="2019072409142501060" data-idx="0">
+        <image src="../../img/yulun_nomal.png" wx:if="{{texTab == 1}}"/>
+        <image src="../../img/yulun_pressed.png" wx:else/>
+      </view>
+      <view class="Event-item" catchtap="texbarTap" data-id="2019072409143047470" data-idx="1">
+        <image src="../../img/qita_nomal.png" wx:if="{{texTab == 0}}" />
+        <image src="../../img/qita_pressed.png" wx:else/>
+      </view>
+    </view>
+    <view  class="titlelist">
+      <titleList List="{{newslist}}" bind:titleId="godetails"></titleList>
+      <view class="nodata" wx:if="{{newslist.length == 0}}">
+        <text>暂无更多数据了</text>
+      </view>
+    </view>
+</view>
+<botTip havedata="{{pagedata}}" length="{{newslist.length}}"></botTip>
+

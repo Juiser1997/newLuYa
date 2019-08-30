@@ -1,0 +1,47 @@
+<view class="page">
+    <view class="top">
+        <view class="input-group {{editstatus == 0 ? 'sp' : ''}}">
+            <view class="label">姓名</view>
+            <view class="rigth" wx:if="{{editstatus==0}}">
+                <text>{{datas.registeName}}</text>
+                <!-- bindtap="changeEdit" <image src="../../img/back.png"/> -->
+            </view>
+            <!-- <view class="input-box" wx:if="{{editstatus==1}}">
+                <input   placeholder="请输入姓名" placeholder-class="plac"  bindinput="bindname"/>
+            </view> -->
+        </view>
+       <view class="input-group {{phonestatus == 0 ? 'sp' : ''}}">
+            <view class="label">电话</view>
+            <view class="rigth" wx:if="{{phonestatus==0}}">
+                <text>{{datas.phone}}</text>
+                <!--  bindtap="changeEditend" <image src="../../img/back.png"/> -->
+            </view>
+            <!-- <view class="input-box" wx:if="{{phonestatus==1}}">
+                <input  placeholder="请输入电话" placeholder-class="plac" value="{{phone}}" bindinput="bindphone"/>
+            </view> -->
+        </view>
+    </view>
+    <view class="input-group sp pd">  
+        <view class="label">性别</view>
+        <view class="rigth">
+            <text>{{datas.sex}}</text>
+            <!-- bindtap="changesex" <image src="../../img/back.png"/> -->
+        </view>
+    </view>
+  <view class="input-group sp pd">
+    <view class="label">所在地</view>
+    <view class="rigth">
+      <picker mode="region" value="{{address}}" custom-item="{{customItem}}">
+        <view class="picker">
+          {{address}}
+        </view>
+      </picker>
+      <!--  bindchange="bindRegionChange" <image src="../../img/back.png" /> -->
+    </view>
+  </view>
+    <view class="text-arear">
+        <view class="label Introduction">简介：</view>
+        <textarea  placeholder="请输入简介" placeholder-class="plac" value="{{datas.remark}}" bindinput="bindtext"></textarea>
+    </view>
+    <!-- <view class="login" bindtap="login">修改</view> -->
+</view>

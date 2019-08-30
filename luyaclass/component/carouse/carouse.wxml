@@ -1,0 +1,8 @@
+    
+<view class='banner-box'  wx:if="{{imgs.length}}"  >
+    <swiper class="swiper" autoplay="{{true}}" interval="3000" duration="500" circular="true" indicator-dots="true" indicator-color="rgba(255,255,255,.3)" indicator-active-color='#fff'>
+      <swiper-item class="swiper-item" wx:for="{{imgs}}" wx:key="index" data-id="{{item.contentId}}" catchtap="gotitle">
+        <image src='{{item.carouselImg}}' mode="aspectFill"></image>
+      </swiper-item>
+    </swiper>
+</view>

@@ -1,0 +1,12 @@
+/* pages/writelist/bosslist.wxss */
+view {
+  padding: 400rpx 0;
+}
+text {
+  display: block;
+  text-align: center;
+}
+.t2 {
+  font-size: 25rpx;
+  margin-top: 20rpx;
+}

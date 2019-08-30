@@ -1,0 +1,22 @@
+  <view class="video" wx:for="{{List}}" wx:key="index" data-id="{{item.id}}" bindtap="gotitle" hidden="{{modalHidden}}">
+    <view class="video-item">
+      <view class="video-top">
+        <text class="video-title">{{item.title}}</text>
+        <view class="video-top-right">
+          <text>更多></text>
+        </view>
+      </view>
+      <view class="video-box">
+        <image src="{{item.img}}" mode="aspectFill" class="bg"></image>
+        <image src="../../img/play.png" class="icon-play"/>
+        <view class="video-time">{{item.long}}</view>
+      </view>
+      <view class="video-bottom">
+        <view class="video-bottom-left">
+          <text>{{item.brand}}</text>
+          <text>{{item.author}}</text>
+        </view>
+        <text>{{item.time}}</text>
+      </view>
+    </view>
+  </view>

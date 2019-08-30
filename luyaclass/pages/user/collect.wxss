@@ -1,0 +1,7 @@
+.article{margin:0 24rpx;box-sizing: border-box;}
+.article-item{display: flex;padding:  24rpx 0;border-bottom: 1rpx solid #ededed;justify-content: space-between;}
+.article-item-left{width: 430rpx;}
+.article-item-title{font-size: 32rpx;line-height: 42rpx;display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 2;overflow: hidden;height: 84rpx;}
+.article-item-bottom{font-size: 22rpx;color:#999;padding-top:25rpx;}
+.article-item-bottom text{margin-right: 15rpx;}
+.article-item-right{width: 234rpx;height: 146rpx;border-radius: 5rpx;}

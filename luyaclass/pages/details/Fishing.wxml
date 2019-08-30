@@ -1,0 +1,14 @@
+<view class="list">
+    <view class="list-item" wx:for="{{list}}" wx:key="nay" catchtap="gotitlelist" data-tid="{{item.id}}">
+        <image class="covimg" src="{{item.coverImg}}" />
+        <view class="title">{{item.title}}</view>
+        <view class="bot">
+            <text class="iconfont icon_fire fire" wx:if="{{item.ishot == 1}}"></text>
+            <text>{{item.realName || '路亚东方'}}</text>
+            <text>{{item.comments}}评论</text>
+            <text>{{item.createTime}}</text>
+        </view>
+    </view>
+</view>
+<botTip havedata="{{havedata}}" length="{{list.length}}"></botTip>
+

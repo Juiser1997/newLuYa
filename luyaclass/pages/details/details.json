@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "BotTip":"../../component/BotTip/BotTip",
+    "htmltowxml": "plugin://htmltowxml/view",
+    "knoData": "../../component/noData/noData"
+  },
+  "navigationBarTitleText": "文章详情"
+}

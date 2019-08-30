@@ -1,0 +1,12 @@
+<view class="top">
+    <image src="{{authorInfo.headImg}}" class="headImg"/>
+    <text class="nickName">作者{{authorInfo.nickName}}</text>
+</view>
+<view class="mid">
+    <text class="reward-text">优质内容值得打赏</text>
+    <view class="mid-wrap">
+        <view  wx:for="{{moneylist}}" class="mid-wrap-item  {{tab == index ? 'active' : ''}}" wx:key="index" data-my="{{item}}" bindtap="checkMoney">{{item}}<text wx:if="{{item!=='自定义'}}">元</text> </view>
+    </view>
+    <view class="reward-tips reward-btn-item">发帖辛苦了！打赏奖励</view>
+    <view class="reward-btn reward-btn-item" >打  赏</view>
+</view>

@@ -1,0 +1,80 @@
+<view class="login" wx:if="{{submit}}">
+    <view class="login-item">
+        <view class="label">姓名</view>
+        <view class="right">
+            <input bindinput="getName" placeholder="请填写真实姓名" value="{{realName}}" bindblur="getRealName" placeholder-style="plc"/>
+        </view>
+    </view>
+    <view class="login-item">
+        <view class="label">昵称</view>
+        <view class="right">
+            <input bindinput="getNick" value="{{user.nickName}}"/>
+        </view>
+    </view>
+    <view class="login-item">
+        <view class="label">性别</view>
+        <view class="right" catchtap="changeSex">
+            <text>{{user.sex}}</text>
+        </view>
+    </view>
+    <view class="login-item">
+        <view class="label">手机号</view>
+        <view class="right">
+            <input bindinput="getPhone" value="{{user.phone}}"/>
+        </view>
+    </view>
+    <view class="login-item">
+        <view class="label">微信号</view>
+        <view class="right">
+            <input bindinput="getWxNumber" bindblur="getWxh" value="{{wxh}}" placeholder="非常重要，用于组织社群" placeholder-style="plc"/>
+        </view>
+    </view>
+    <view class="login-item">
+        <view class="label">生日</view>
+        <view class="right">
+            <picker mode="date" value="{{user.birthday}}" bindchange="bindDateChange">
+                <view class="picker">{{user.birthday}}</view>
+            </picker>
+        </view>
+    </view>
+    <view class="login-item">
+        <view class="label">地区</view>
+        <view class="right">
+            <picker mode="region" bindchange="bindRegionChange" value="{{address}}" custom-item="{{customItem}}">
+                <view class="picker">
+                {{address}}
+                </view>
+            </picker>        
+      </view>
+    </view>
+    <view class="login-item">
+      <view class="label">头像</view>
+      <view class="right">
+        <image class="headimg" src="{{imgs}}" wx-if="{{imgs.length > 0}}" bindtap="checkphoto"/>
+        <view  class="img-add" bindtap="checkphoto" wx-if="{{imgs.length == 0}}">
+          <text class="iconfont plus-add add"></text>
+        </view>
+      </view>
+    </view>
+    <form name='pushMsg' report-submit='true' bindsubmit='getFormID'> 
+        <button form-type="submit" class="submit">提交信息</button>
+    </form>
+</view>
+<view class="already" wx:if="{{!submit}}">
+    <image src="../../img/bg.gif" class="bg" />
+    <image src="../../img/icon_gou_2.png" class="logo-tg" />
+    <view class="tips">资料提交成功</view>
+    <view class="msgbox">
+        <view class="msg-top">
+            审核通过后，俱乐部注册码将以路亚帮服务通知的形式发送（24小时内），请您留意微信内的服务通知     
+        </view>
+        <view class="msg">
+            <image src="../../img/icon_fuwutongzhi.png" />
+            <view class="txt">
+                <view class="txt-h1">服务通知</view>
+                <view class="txt-h2">信息处理提醒</view>
+            </view>
+        </view>
+    </view>
+    <view class="back" catchtap="back">返回路亚帮首页</view>
+</view>
